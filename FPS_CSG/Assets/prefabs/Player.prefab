@@ -131,7 +131,7 @@ CharacterController:
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
+  m_MinMoveDistance: 0.00001
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5794649401312366847
 MonoBehaviour:
@@ -146,11 +146,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LockMouse: 1
-  MovementSpeed: 1
+  MovementSpeed: 3.61
   JumpHeight: 1
+  FallMultiplier: 5
+  LowJumpMultiplier: 4
   MaxJumps: 1
   sensitivity: 10
+  MaxViewAngle: 89
   ViewCam: {fileID: 3297995400032301430}
+  NoClip: 0
 --- !u!1 &3297995400032301435
 GameObject:
   m_ObjectHideFlags: 0
