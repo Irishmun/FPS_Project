@@ -1,0 +1,10 @@
+collision sounds
+
+scriptable object with array for soft collision, hard collision and breaking sound
+
+script that requires the scriptable object and calls play sound method on it when colliding with world
+plays random sound when coliding at low (soft) velocity, hard velocity and when it breaks (IF possible)
+
+will play from other sound arrays if correct one isn't available
+
+OnCollisionEnter method
