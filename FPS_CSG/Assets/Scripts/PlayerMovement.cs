@@ -77,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
 
         //push the object with strength
-        body.velocity = pushDir;// * (Controller.velocity.magnitude * PushPower);
+        body.velocity = (pushDir * (Controller.velocity.magnitude * PushPower)) / body.mass;
     }
 
     private void HandleInput()

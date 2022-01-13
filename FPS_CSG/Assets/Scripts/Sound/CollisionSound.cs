@@ -11,7 +11,7 @@ public class CollisionSound : MonoBehaviour
     [SerializeField, Tooltip("What sounds this object should make on collisions.")]
     private MaterialSoundScriptableObject Sounds;
     [SerializeField]
-    private float MinSoftCollisionVelocity = 1f;
+    private float MinSoftCollisionVelocity = 0.01f;
     [SerializeField]
     private float MinHardCollisionVelocity = 10f;
 
@@ -45,13 +45,13 @@ public class CollisionSound : MonoBehaviour
                 if (_CurrentVelocity < MinHardCollisionVelocity)
                 {
                     //play soft sound
-                    Debug.Log("Soft Collision on " + gameObject.name);
+                    //Debug.Log("Soft Collision on " + gameObject.name);
                     Sounds.PlayCollisionSound(MaterialSoundScriptableObject.CollisionSpeed.Soft, _Audio);
                 }
                 else
                 {
                     //play hard sound
-                    Debug.Log("Hard Collision on " + gameObject.name);
+                    //Debug.Log("Hard Collision on " + gameObject.name);
                     Sounds.PlayCollisionSound(MaterialSoundScriptableObject.CollisionSpeed.Hard, _Audio);
                 }
             }

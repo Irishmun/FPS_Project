@@ -73,7 +73,7 @@ public class MaterialSoundScriptableObject : ScriptableObject
                 return sounds[0];
             }
             int val = Random.Range(0, sounds.Length);
-            Debug.Log(val);
+            //Debug.Log(val);
             return sounds[val];
         }
         return null;
