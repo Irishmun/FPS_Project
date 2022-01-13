@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement")]
     [SerializeField, Tooltip("How fast the player moves in meters per second")]
     private float MovementSpeed = 3.61f;//movement speed in half life 2 is 3,61 m/s
+    [SerializeField, Tooltip("How fast the player can push objects")]
+    private float PushPower = 2f;
     [Header("Jumping")]
     [SerializeField, Tooltip("How high (in meters) the player jumps")]
     private float JumpHeight = 1f;
@@ -59,6 +61,23 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         HandleInput();
+
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        //TODO: Fix janky pushing
+        Rigidbody body = hit.collider.attachedRigidbody;
+
+        //no rigidbody on collision
+        if (body == null || body.isKinematic) return;
+        //dont push objects below controller
+        if (hit.moveDirection.y < -0.3) return;
+
+        Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
+
+        //push the object with strength
+        body.velocity = pushDir;// * (Controller.velocity.magnitude * PushPower);
     }
 
     private void HandleInput()

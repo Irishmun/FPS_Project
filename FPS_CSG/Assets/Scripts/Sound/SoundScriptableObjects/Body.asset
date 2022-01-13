@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f267b4d990e1cd4fab16b35b6575a33, type: 3}
+  m_Name: Body
+  m_EditorClassIdentifier: 
+  SoftCollisionSounds:
+  - {fileID: 8300000, guid: c51ccdf3cc891144083204773f7d6e81, type: 3}
+  - {fileID: 8300000, guid: 5eedd2d30ac121d42891e3bf3d56928b, type: 3}
+  - {fileID: 8300000, guid: 3c377c56156345a4d83438b345af00e1, type: 3}
+  - {fileID: 8300000, guid: 611239210b115414e9a773debd6693d7, type: 3}
+  - {fileID: 8300000, guid: 8ae34bc5b49e26b4ab80822418f28684, type: 3}
+  - {fileID: 8300000, guid: bb4bac9f82ae88847a01b0832d836aa2, type: 3}
+  - {fileID: 8300000, guid: 455af6654a574124c8aa1d0c1d25a909, type: 3}
+  HardCollisionSounds:
+  - {fileID: 8300000, guid: db74dda1522615f4f8667ed429776091, type: 3}
+  - {fileID: 8300000, guid: 94e078a88c475bf4dae77f5e39741038, type: 3}
+  - {fileID: 8300000, guid: 81a263c3591dce94aa85f4a6681edb03, type: 3}
+  - {fileID: 8300000, guid: 0bb1bbc1145f7af4993178ce3ddbdfec, type: 3}
+  - {fileID: 8300000, guid: 7df2b0e19922fe149b061267e92b0440, type: 3}
+  - {fileID: 8300000, guid: cd9040a27ddd7c143a200327362bb73f, type: 3}
+  DestructionSounds:
+  - {fileID: 8300000, guid: f1a5f3ca78ed62f458bf46b30fbcb6eb, type: 3}
+  - {fileID: 8300000, guid: 65e88520bd2b2184c8960ff101110cad, type: 3}
+  - {fileID: 8300000, guid: 20cdbfaabaa81a0409b2ef8d32190882, type: 3}

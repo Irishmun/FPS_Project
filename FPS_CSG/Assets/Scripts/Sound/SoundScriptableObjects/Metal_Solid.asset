@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f267b4d990e1cd4fab16b35b6575a33, type: 3}
+  m_Name: Metal_Solid
+  m_EditorClassIdentifier: 
+  SoftCollisionSounds:
+  - {fileID: 8300000, guid: 6aabf054fca2a274b8c51dcf6bed8dc3, type: 3}
+  - {fileID: 8300000, guid: ff928ac938224654890d30840ed71393, type: 3}
+  - {fileID: 8300000, guid: 722e1ccd08f2c084280d33df4bdbfbde, type: 3}
+  HardCollisionSounds:
+  - {fileID: 8300000, guid: 951b942507f423243b87cfbe4ca9d1f4, type: 3}
+  - {fileID: 8300000, guid: 3f96bfac469bbd2429793e5dc57fbe82, type: 3}
+  - {fileID: 8300000, guid: 7c12f7b766cf62e428d675563ca15ca6, type: 3}
+  DestructionSounds: []
