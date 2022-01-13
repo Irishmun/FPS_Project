@@ -10,6 +10,10 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement")]
     [SerializeField, Tooltip("How fast the player moves in meters per second")]
     private float MovementSpeed = 3.61f;//movement speed in half life 2 is 3,61 m/s
+    [SerializeField, Tooltip("How fast the player moves when crouching in meters per second")]
+    private float CrouchedSpeed = 1.56f;
+    [SerializeField, Tooltip("How tall the player is when crouching (in units)")]
+    private float CrouchHeight = 1f;
     [SerializeField, Tooltip("How fast the player can push objects")]
     private float PushPower = 2f;
     [Header("Jumping")]
@@ -25,33 +29,40 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float sensitivity = 10;
     [SerializeField]
-    private float MaxViewAngle = 89f;
+    private float MaxViewAngle = 75f;
     [SerializeField]
     private Camera ViewCam;
-
+    [Header("Misc")]
+    [SerializeField, Tooltip("Additional colliders to use for collision testing")]
+    private BoxCollider[] AdditionalColliders;
     [Header("Debug")]
     [SerializeField]
     private bool NoClip = false;
 
     private bool _NoClip;
 
-    private CharacterController Controller;
-    private int CurrentJumps = 0;
-    private float MouseX, MouseY, GravityVelocity;
+    private CharacterController _Controller;
+    private int _CurrentJumps = 0;
+    private float _MouseX, _MouseY, _GravityVelocity;
+    private float _StandingHeight, _CurrentMovementSpeed;
 
-    private float PlayerVelocity, Gravity, JumpValue;
-    private bool Grounded;
+    private float _VerticalVelocity, _Gravity, _JumpValue;//gravity physics
+    private bool _Grounded;
 
     private void Awake()
     {
-        _NoClip = NoClip;
-        Gravity = Physics.gravity.y;
-        JumpValue = Mathf.Sqrt(JumpHeight * -3.0f * Gravity);
-        //force lower framerate for testing
-        QualitySettings.vSyncCount = 1;
-        Application.targetFrameRate = -1;
+        //lock mouse if needed
         Cursor.lockState = LockMouse ? CursorLockMode.Locked : CursorLockMode.None;
-        Controller = GetComponent<CharacterController>();
+
+        //get external components
+        _Controller = GetComponent<CharacterController>();
+
+        //set private values
+        _NoClip = NoClip;
+        _Gravity = Physics.gravity.y;
+        _JumpValue = Mathf.Sqrt(JumpHeight * -3.0f * _Gravity);
+        _CurrentMovementSpeed = MovementSpeed;
+        _StandingHeight = _Controller.height;
     }
     private void Start()
     {
@@ -77,7 +88,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
 
         //push the object with strength
-        body.velocity = (pushDir * (Controller.velocity.magnitude * PushPower)) / body.mass;
+        body.velocity = (pushDir * (_Controller.velocity.magnitude * PushPower)) / body.mass;
     }
 
     private void HandleInput()
@@ -107,37 +118,60 @@ public class PlayerMovement : MonoBehaviour
         if (_NoClip != NoClip)
         {
             Debug.Log("No Clip: " + NoClip);
-            Controller.enabled = !NoClip;
+            _Controller.enabled = !NoClip;
             _NoClip = NoClip;
         }
     }
     private void movement()
     {
-        MouseX += Input.GetAxis("Mouse X") * sensitivity;
-        MouseY -= Input.GetAxis("Mouse Y") * sensitivity;
+        _MouseX += Input.GetAxis("Mouse X") * sensitivity;
+        _MouseY -= Input.GetAxis("Mouse Y") * sensitivity;
 
         float moveX = Input.GetAxis("Horizontal");
         float moveY = Input.GetAxis("Vertical");
-        Grounded = Controller.isGrounded;
-        CurrentJumps = Grounded ? 0 : CurrentJumps;
+        _Grounded = _Controller.isGrounded;
+        _CurrentJumps = _Grounded ? 0 : _CurrentJumps;
 
-        if (Grounded && PlayerVelocity < 0)
+        if (_Grounded && _VerticalVelocity < 0)
         {
-            PlayerVelocity = 0f;
+            _VerticalVelocity = 0f;
         }
         //camera looking
-        transform.localEulerAngles = new Vector3(0, MouseX, 0);
-        ViewCam.transform.localEulerAngles = new Vector3(Mathf.Clamp(MouseY, -MaxViewAngle, MaxViewAngle), 0, 0);
+        transform.localEulerAngles = new Vector3(0, _MouseX, 0);
+        ViewCam.transform.localEulerAngles = new Vector3(Mathf.Clamp(_MouseY, -MaxViewAngle, MaxViewAngle), 0, 0);
+
+        #region crouch handling
+        if (Input.GetKey(KeyCode.LeftControl))
+        {
+            _Controller.height = CrouchHeight;
+            _CurrentMovementSpeed = CrouchedSpeed;
+            //gameObject.transform.localScale = new Vector3(transform.localScale.x, CrouchHeight / 2, transform.localScale.z);
+            /* foreach (BoxCollider col in AdditionalColliders)
+             {
+                 col.size = new Vector3(col.size.x, CrouchHeight, col.size.z);
+             }*/
+        }
+        else//TODO: fix crouching, changing scale gives cleaner results but messes with child objects. Changing height of controller does not matter as colliders are in the way and child objects (camera) are not repositioned
+        {
+            _Controller.height = _StandingHeight;
+            _CurrentMovementSpeed = MovementSpeed;
+            //gameObject.transform.localScale = new Vector3(transform.localScale.x, _StandingHeight / 2, transform.localScale.z);
+            /*foreach (BoxCollider col in AdditionalColliders)
+            {
+                col.size = new Vector3(col.size.x, _StandingHeight, col.size.z);
+            }*/
+        }
+        #endregion
 
         //movement
         if (_NoClip)
         {
             Vector3 DMove = ((transform.right * moveX) + (ViewCam.transform.forward * moveY)).normalized;
-            DMove *= MovementSpeed * Time.deltaTime;
+            DMove *= _CurrentMovementSpeed * Time.deltaTime;
             Debug.DrawRay(transform.position, DMove, Color.red);
             if (Input.GetButton("Jump"))
             {
-                DMove += ViewCam.transform.up * JumpValue * Time.deltaTime;
+                DMove += ViewCam.transform.up * _JumpValue * Time.deltaTime;
 
             }
             transform.position += DMove * 2;
@@ -145,36 +179,36 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             Vector3 move = ((transform.right * moveX) + (transform.forward * moveY)).normalized;
-            move *= (MovementSpeed * 2);
-
-            //jump handling
+            move *= (_CurrentMovementSpeed);
+            #region jump handling
             //Debug.Log("Velocity.y: " + Controller.velocity.y.ToString("0.00"));
 
-            if (Input.GetButtonDown("Jump") && (Grounded || CurrentJumps < MaxJumps))
+            if (Input.GetButtonDown("Jump") && (_Grounded || _CurrentJumps < MaxJumps))
             {
-                PlayerVelocity += JumpValue;
-                CurrentJumps++;//multi jump functionality
+                _VerticalVelocity += _JumpValue;
+                _CurrentJumps++;//multi jump functionality
             }
-            if (Controller.velocity.y < 0 && !Grounded)
+            if (_Controller.velocity.y < 0 && !_Grounded)
             {
-                PlayerVelocity -= FallMultiplier * Time.deltaTime;
+                _VerticalVelocity -= FallMultiplier * Time.deltaTime;
             }
-            else if (Controller.velocity.y > 0 && !Input.GetButton("Jump"))
+            else if (_Controller.velocity.y > 0 && !Input.GetButton("Jump"))
             {
-                PlayerVelocity -= LowJumpMultiplier * Time.deltaTime;
+                _VerticalVelocity -= LowJumpMultiplier * Time.deltaTime;
             }
-            if ((Controller.collisionFlags & CollisionFlags.Above) != 0)
+            if ((_Controller.collisionFlags & CollisionFlags.Above) != 0)
             {//player head bumping, prevent player from sticking to ceiling when jumpingin low areas
-                if (PlayerVelocity > 0)
+                if (_VerticalVelocity > 0)
                 {
-                    PlayerVelocity = 0;
+                    _VerticalVelocity = 0;
                 }
             }
-            PlayerVelocity += Gravity * Time.deltaTime;
+            #endregion
+            _VerticalVelocity += _Gravity * Time.deltaTime;
             //move handling
-            move.y = PlayerVelocity;
+            move.y = _VerticalVelocity;
             Debug.DrawRay(transform.position, move, Color.red);
-            Controller.Move(move * Time.deltaTime + (Vector3.up * GravityVelocity));
+            _Controller.Move(move * Time.deltaTime + (Vector3.up * _GravityVelocity));
         }
     }
 }
