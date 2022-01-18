@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController _Controller;
     private int _CurrentJumps = 0;
     private float _MouseX, _MouseY, _GravityVelocity;
-    private float _StandingHeight, _CurrentMovementSpeed;
+    private float _StandingHeight, _CurrentMovementSpeed, _CrouchOffset, _CamStandHeight;
 
     private float _VerticalVelocity, _Gravity, _JumpValue;//gravity physics
     private bool _Grounded;
@@ -63,6 +63,8 @@ public class PlayerMovement : MonoBehaviour
         _JumpValue = Mathf.Sqrt(JumpHeight * -3.0f * _Gravity);
         _CurrentMovementSpeed = MovementSpeed;
         _StandingHeight = _Controller.height;
+        _CrouchOffset = CrouchHeight / _StandingHeight;
+        _CamStandHeight = ViewCam.transform.position.y - transform.position.y;
     }
     private void Start()
     {
@@ -145,6 +147,7 @@ public class PlayerMovement : MonoBehaviour
         {
             _Controller.height = CrouchHeight;
             _CurrentMovementSpeed = CrouchedSpeed;
+            ViewCam.transform.position = new Vector3(ViewCam.transform.position.x, transform.position.y + (_Controller.height - _CrouchOffset), ViewCam.transform.position.z); //Vector3.Lerp(ViewCam.transform.position, new Vector3(ViewCam.transform.position.x, transform.position.y + _CrouchOffset, ViewCam.transform.position.z), Time.deltaTime);
             //gameObject.transform.localScale = new Vector3(transform.localScale.x, CrouchHeight / 2, transform.localScale.z);
             /* foreach (BoxCollider col in AdditionalColliders)
              {
@@ -155,6 +158,7 @@ public class PlayerMovement : MonoBehaviour
         {
             _Controller.height = _StandingHeight;
             _CurrentMovementSpeed = MovementSpeed;
+            ViewCam.transform.position = new Vector3(ViewCam.transform.position.x, transform.position.y + _CamStandHeight, ViewCam.transform.position.z); //Vector3.Lerp(ViewCam.transform.position, new Vector3(ViewCam.transform.position.x, transform.position.y + _CamStandHeight, ViewCam.transform.position.z), Time.deltaTime);
             //gameObject.transform.localScale = new Vector3(transform.localScale.x, _StandingHeight / 2, transform.localScale.z);
             /*foreach (BoxCollider col in AdditionalColliders)
             {

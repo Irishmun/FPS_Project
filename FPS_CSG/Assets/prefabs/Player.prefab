@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 4970781073218483167}
   - component: {fileID: 8694520127742747616}
   - component: {fileID: 5794649401312366847}
+  - component: {fileID: 3851532532920227474}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -148,7 +149,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LockMouse: 1
   MovementSpeed: 3.61
-  PushPower: 2
+  CrouchedSpeed: 1.56
+  CrouchHeight: 0.9
+  PushPower: 0.5
   JumpHeight: 1
   FallMultiplier: 5
   LowJumpMultiplier: 4
@@ -156,7 +159,22 @@ MonoBehaviour:
   sensitivity: 10
   MaxViewAngle: 89
   ViewCam: {fileID: 3297995400032301430}
+  AdditionalColliders:
+  - {fileID: 3851532532920227474}
   NoClip: 0
+--- !u!65 &3851532532920227474
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627828580961385322}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.5, z: 1}
+  m_Center: {x: 0, y: -0.75, z: 0}
 --- !u!1 &3297995400032301435
 GameObject:
   m_ObjectHideFlags: 0
