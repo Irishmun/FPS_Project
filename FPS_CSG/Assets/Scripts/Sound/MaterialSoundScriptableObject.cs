@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "new MaterialSound", menuName = "ScriptableObjects/MaterialSound", order = 1)]
-public class MaterialSoundScriptableObject : ScriptableObject
+[CreateAssetMenu(fileName = "new MaterialSound", menuName = "ScriptableObjects/CollisionSound", order = 1)]
+public class MaterialSoundScriptableObject : MaterialSoundBase
 {
     [SerializeField, Tooltip("Sound(s) to play when the object collides at low speed.")]
     private AudioClip[] SoftCollisionSounds;
@@ -57,25 +57,5 @@ public class MaterialSoundScriptableObject : ScriptableObject
                 }
             }
         }
-    }
-
-    /// <summary>
-    /// Returns a random audio clip from the passed array if it has any.
-    /// </summary>
-    /// <param name="sounds">The <see cref="AudioClip"/> array to choose a sound from.</param>
-    /// <returns>A random audio clip from the passed array if it has any</returns>
-    private AudioClip GetRandomClip(AudioClip[] sounds)
-    {
-        if (sounds.Length > 0)
-        {
-            if (sounds.Length == 1)
-            {
-                return sounds[0];
-            }
-            int val = Random.Range(0, sounds.Length);
-            //Debug.Log(val);
-            return sounds[val];
-        }
-        return null;
     }
 }
