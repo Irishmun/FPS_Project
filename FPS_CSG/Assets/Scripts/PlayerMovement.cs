@@ -166,7 +166,8 @@ public class PlayerMovement : MonoBehaviour
         {
             _CurrentMovementSpeed = SprintingSpeed;
         }
-        else if (Input.GetKey(KeyCode.LeftControl))
+
+        if (Input.GetKey(KeyCode.LeftControl))
         {
             _Controller.height = CrouchHeight;
             _CurrentMovementSpeed = CrouchedSpeed;
@@ -180,13 +181,16 @@ public class PlayerMovement : MonoBehaviour
         else//TODO: fix crouching, changing scale gives cleaner results but messes with child objects. Changing height of controller does not matter as colliders are in the way and child objects (camera) are not repositioned
         {
             _Controller.height = _StandingHeight;
-            _CurrentMovementSpeed = MovementSpeed;
             ViewCam.transform.position = new Vector3(ViewCam.transform.position.x, transform.position.y + _CamStandHeight, ViewCam.transform.position.z); //Vector3.Lerp(ViewCam.transform.position, new Vector3(ViewCam.transform.position.x, transform.position.y + _CamStandHeight, ViewCam.transform.position.z), Time.deltaTime);
             //gameObject.transform.localScale = new Vector3(transform.localScale.x, _StandingHeight / 2, transform.localScale.z);
             /*foreach (BoxCollider col in AdditionalColliders)
             {
                 col.size = new Vector3(col.size.x, _StandingHeight, col.size.z);
             }*/
+        }
+        if (!Input.GetKey(KeyCode.LeftControl) && !Input.GetKey(KeyCode.LeftShift))
+        {
+            _CurrentMovementSpeed = MovementSpeed;
         }
         #endregion
         //movement
