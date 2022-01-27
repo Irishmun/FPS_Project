@@ -5,11 +5,11 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController)), SelectionBase]
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField, Tooltip("Should the user's mouse be locked and hidden at the start of the game")]
-    private bool LockMouse = true;
     [Header("Movement")]
     [SerializeField, Tooltip("How fast the player moves in meters per second")]
     private float MovementSpeed = 3.61f;//movement speed in half life 2 is 3,61 m/s
+    [SerializeField, Tooltip("How fast the player sprints in meters per second")]
+    private float SprintingSpeed = 5.42f;//movement speed * 1.5 rounded up
     [SerializeField, Tooltip("How fast the player moves when crouching in meters per second")]
     private float CrouchedSpeed = 1.56f;
     [SerializeField, Tooltip("How tall the player is when crouching (in units)")]
@@ -33,6 +33,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private Camera ViewCam;
     [Header("Misc")]
+    [SerializeField, Tooltip("(kg)How much the player weighs, used for gravity and pushing")]
+    private float Mass = 1f;
     [SerializeField, Tooltip("Additional colliders to use for collision testing")]
     private BoxCollider[] AdditionalColliders;
     [Header("Debug")]
@@ -52,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         //lock mouse if needed
-        Cursor.lockState = LockMouse ? CursorLockMode.Locked : CursorLockMode.None;
+        Cursor.lockState = CursorLockMode.Locked;
 
         //get external components
         _Controller = GetComponent<CharacterController>();
@@ -79,18 +81,35 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        //TODO: Fix janky pushing
         Rigidbody body = hit.collider.attachedRigidbody;
-
-        //no rigidbody on collision
-        if (body == null || body.isKinematic) return;
-        //dont push objects below controller
+        Vector3 force;
+        // no rigidbody
+        if (body == null || body.isKinematic) { return; }
         if (hit.moveDirection.y < -0.3) return;
+        // We use gravity and weight to push things down, we use
+        // our velocity and push power to push things other directions
+        if (hit.moveDirection.y < -0.3)
+        {
+            force = new Vector3(0, -0.5f, 0) * _Gravity * Mass;
+        }
+        else
+        {
+            force = hit.controller.velocity * PushPower;
+        }
 
-        Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
+        // Apply the push
+        body.AddForceAtPosition(force, hit.point);
+        /* //TODO: Fix janky pushing
 
-        //push the object with strength
-        body.velocity = (pushDir * (_Controller.velocity.magnitude * PushPower)) / body.mass;
+         //no rigidbody on collision
+         if (body == null || body.isKinematic) return;
+         //dont push objects below controller
+         if (hit.moveDirection.y < -0.3) return;
+
+         Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
+
+         //push the object with strength
+         body.velocity = (pushDir * (_Controller.velocity.magnitude * PushPower)) / body.mass;*/
     }
 
     private void HandleInput()
@@ -142,8 +161,12 @@ public class PlayerMovement : MonoBehaviour
         transform.localEulerAngles = new Vector3(0, _MouseX, 0);
         ViewCam.transform.localEulerAngles = new Vector3(Mathf.Clamp(_MouseY, -MaxViewAngle, MaxViewAngle), 0, 0);
 
-        #region crouch handling
-        if (Input.GetKey(KeyCode.LeftControl))
+        #region Crouch and Sprint handling
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            _CurrentMovementSpeed = SprintingSpeed;
+        }
+        else if (Input.GetKey(KeyCode.LeftControl))
         {
             _Controller.height = CrouchHeight;
             _CurrentMovementSpeed = CrouchedSpeed;
@@ -166,7 +189,6 @@ public class PlayerMovement : MonoBehaviour
             }*/
         }
         #endregion
-
         //movement
         if (_NoClip)
         {
@@ -208,11 +230,16 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
             #endregion
-            _VerticalVelocity += _Gravity * Time.deltaTime;
+            _VerticalVelocity += (_Gravity * Mass) * Time.deltaTime;
             //move handling
             move.y = _VerticalVelocity;
             Debug.DrawRay(transform.position, move, Color.red);
             _Controller.Move(move * Time.deltaTime + (Vector3.up * _GravityVelocity));
         }
+    }
+
+    public void Teleport(Transform transform)
+    {
+        this.transform.position = transform.position;
     }
 }

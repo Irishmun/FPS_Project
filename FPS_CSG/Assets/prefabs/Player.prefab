@@ -131,7 +131,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc5e52ebd1d01294a93eb7b99e9a9fd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LockMouse: 1
   MovementSpeed: 3.61
   CrouchedSpeed: 1.56
   CrouchHeight: 0.9
@@ -140,9 +139,10 @@ MonoBehaviour:
   FallMultiplier: 5
   LowJumpMultiplier: 4
   MaxJumps: 2
-  sensitivity: 10
+  sensitivity: 5
   MaxViewAngle: 89
   ViewCam: {fileID: 3297995400032301430}
+  Mass: 2
   AdditionalColliders:
   - {fileID: 3851532532920227474}
   NoClip: 0
@@ -158,6 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fc4f75739c9d0d4b84ab5d64deab053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaterialsLookup: {fileID: 0}
 --- !u!65 &3851532532920227474
 BoxCollider:
   m_ObjectHideFlags: 0
