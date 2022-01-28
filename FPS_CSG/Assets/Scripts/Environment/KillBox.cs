@@ -6,7 +6,7 @@ using UnityEngine;
 public class KillBox : MonoBehaviour
 {
     [SerializeField, Tooltip("Where the entered object Will Be brought to")]
-    private Transform RespawnPoint;
+    private Vector3 RespawnPoint;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -18,7 +18,7 @@ public class KillBox : MonoBehaviour
         }
         else
         {
-            other.transform.position = RespawnPoint.position;
+            other.transform.position = RespawnPoint;
         }
     }
 
@@ -26,7 +26,7 @@ public class KillBox : MonoBehaviour
     {
         if (RespawnPoint != null)
         {
-            Gizmos.DrawSphere(RespawnPoint.position, 0.25f);
+            Gizmos.DrawSphere(RespawnPoint, 0.25f);
 
         }
     }

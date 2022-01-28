@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71d20344dd9f25641b3d9a757c72e66c, type: 3}
-  m_Name: new WalkSound
+  m_Name: Default WalkSound
   m_EditorClassIdentifier: 
   WalkSounds:
   - material: {fileID: 2100000, guid: c0bcff94f56da0246aa5941cdbb58fdc, type: 2}

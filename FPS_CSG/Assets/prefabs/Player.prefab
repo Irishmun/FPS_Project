@@ -132,6 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MovementSpeed: 3.61
+  SprintingSpeed: 5.415
   CrouchedSpeed: 1.56
   CrouchHeight: 0.9
   PushPower: 0.5
@@ -158,7 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fc4f75739c9d0d4b84ab5d64deab053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaterialsLookup: {fileID: 0}
+  MaterialsLookup: {fileID: 11400000, guid: 8e80b74344f383a43ba0ac59cccb5970, type: 2}
 --- !u!65 &3851532532920227474
 BoxCollider:
   m_ObjectHideFlags: 0

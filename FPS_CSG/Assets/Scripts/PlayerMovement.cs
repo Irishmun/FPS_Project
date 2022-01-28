@@ -53,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
-        //lock mouse if needed
+        //lock mouse
         Cursor.lockState = CursorLockMode.Locked;
 
         //get external components
@@ -68,72 +68,26 @@ public class PlayerMovement : MonoBehaviour
         _CrouchOffset = CrouchHeight / _StandingHeight;
         _CamStandHeight = ViewCam.transform.position.y - transform.position.y;
     }
-    private void Start()
-    {
-        ViewCam.transform.localEulerAngles = new Vector3(0, ViewCam.transform.rotation.y, 0);
-    }
     // Update is called once per frame
     void Update()
     {
         HandleInput();
-
     }
-
-    private void OnControllerColliderHit(ControllerColliderHit hit)
-    {
-        Rigidbody body = hit.collider.attachedRigidbody;
-        Vector3 force;
-        // no rigidbody
-        if (body == null || body.isKinematic) { return; }
-        if (hit.moveDirection.y < -0.3) return;
-        // We use gravity and weight to push things down, we use
-        // our velocity and push power to push things other directions
-        if (hit.moveDirection.y < -0.3)
-        {
-            force = new Vector3(0, -0.5f, 0) * _Gravity * Mass;
-        }
-        else
-        {
-            force = hit.controller.velocity * PushPower;
-        }
-
-        // Apply the push
-        body.AddForceAtPosition(force, hit.point);
-        /* //TODO: Fix janky pushing
-
-         //no rigidbody on collision
-         if (body == null || body.isKinematic) return;
-         //dont push objects below controller
-         if (hit.moveDirection.y < -0.3) return;
-
-         Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
-
-         //push the object with strength
-         body.velocity = (pushDir * (_Controller.velocity.magnitude * PushPower)) / body.mass;*/
-    }
-
     private void HandleInput()
     {
         debugValues();
         movement();
     }
+
     private void debugValues()
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            MovementSpeed++;
-        }
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            MovementSpeed--;
-        }
-
         if (Input.GetKeyDown(KeyCode.B))
         {
             Debug.Break();
         }
         if (Input.GetKeyDown(KeyCode.V))
         {
+            //toggle noclip mode
             NoClip = !NoClip;
         }
         if (_NoClip != NoClip)
@@ -143,6 +97,7 @@ public class PlayerMovement : MonoBehaviour
             _NoClip = NoClip;
         }
     }
+
     private void movement()
     {
         _MouseX += Input.GetAxis("Mouse X") * sensitivity;
@@ -155,6 +110,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (_Grounded && _VerticalVelocity < 0)
         {
+            //prevent falling from ever increasing
             _VerticalVelocity = 0f;
         }
         //camera looking
@@ -163,39 +119,34 @@ public class PlayerMovement : MonoBehaviour
 
         #region Crouch and Sprint handling
         if (Input.GetKey(KeyCode.LeftShift))
-        {
+        {   //set moving speed to sprinting speed
             _CurrentMovementSpeed = SprintingSpeed;
         }
 
         if (Input.GetKey(KeyCode.LeftControl))
         {
+            //shorten player, reposition camera and set moving speed to crouching speed
             _Controller.height = CrouchHeight;
             _CurrentMovementSpeed = CrouchedSpeed;
-            ViewCam.transform.position = new Vector3(ViewCam.transform.position.x, transform.position.y + (_Controller.height - _CrouchOffset), ViewCam.transform.position.z); //Vector3.Lerp(ViewCam.transform.position, new Vector3(ViewCam.transform.position.x, transform.position.y + _CrouchOffset, ViewCam.transform.position.z), Time.deltaTime);
-            //gameObject.transform.localScale = new Vector3(transform.localScale.x, CrouchHeight / 2, transform.localScale.z);
-            /* foreach (BoxCollider col in AdditionalColliders)
-             {
-                 col.size = new Vector3(col.size.x, CrouchHeight, col.size.z);
-             }*/
+            ViewCam.transform.position = new Vector3(ViewCam.transform.position.x, transform.position.y + (_Controller.height - _CrouchOffset), ViewCam.transform.position.z);
+
         }
-        else//TODO: fix crouching, changing scale gives cleaner results but messes with child objects. Changing height of controller does not matter as colliders are in the way and child objects (camera) are not repositioned
+        else
         {
+            //set player back to regular size
             _Controller.height = _StandingHeight;
-            ViewCam.transform.position = new Vector3(ViewCam.transform.position.x, transform.position.y + _CamStandHeight, ViewCam.transform.position.z); //Vector3.Lerp(ViewCam.transform.position, new Vector3(ViewCam.transform.position.x, transform.position.y + _CamStandHeight, ViewCam.transform.position.z), Time.deltaTime);
-            //gameObject.transform.localScale = new Vector3(transform.localScale.x, _StandingHeight / 2, transform.localScale.z);
-            /*foreach (BoxCollider col in AdditionalColliders)
-            {
-                col.size = new Vector3(col.size.x, _StandingHeight, col.size.z);
-            }*/
+            ViewCam.transform.position = new Vector3(ViewCam.transform.position.x, transform.position.y + _CamStandHeight, ViewCam.transform.position.z);
         }
         if (!Input.GetKey(KeyCode.LeftControl) && !Input.GetKey(KeyCode.LeftShift))
         {
+            //set movementspeed to normal speed when neither sprinting nor crouching
             _CurrentMovementSpeed = MovementSpeed;
         }
         #endregion
         //movement
         if (_NoClip)
         {
+            //move via transform wherever the player is looking, disable collisions
             Vector3 DMove = ((transform.right * moveX) + (ViewCam.transform.forward * moveY)).normalized;
             DMove *= _CurrentMovementSpeed * Time.deltaTime;
             Debug.DrawRay(transform.position, DMove, Color.red);
@@ -208,26 +159,29 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            //collisions enabled, move via CharacterController where the player is looking on the horizontal plane
             Vector3 move = ((transform.right * moveX) + (transform.forward * moveY)).normalized;
             move *= (_CurrentMovementSpeed);
             #region jump handling
-            //Debug.Log("Velocity.y: " + Controller.velocity.y.ToString("0.00"));
-
             if (Input.GetButtonDown("Jump") && (_Grounded || _CurrentJumps < MaxJumps))
             {
+                //jump if the player has not reached the max jump amount yet
                 _VerticalVelocity += _JumpValue;
                 _CurrentJumps++;//multi jump functionality
             }
             if (_Controller.velocity.y < 0 && !_Grounded)
             {
+                //start falling if the player has reached the apex of the jump
                 _VerticalVelocity -= FallMultiplier * Time.deltaTime;
             }
             else if (_Controller.velocity.y > 0 && !Input.GetButton("Jump"))
             {
+                //fall quicker if the player has let go of jump before reaching the apex
                 _VerticalVelocity -= LowJumpMultiplier * Time.deltaTime;
             }
             if ((_Controller.collisionFlags & CollisionFlags.Above) != 0)
-            {//player head bumping, prevent player from sticking to ceiling when jumpingin low areas
+            {
+                //player head bumping, prevent player from sticking to ceiling when jumpingin low areas
                 if (_VerticalVelocity > 0)
                 {
                     _VerticalVelocity = 0;
@@ -237,13 +191,30 @@ public class PlayerMovement : MonoBehaviour
             _VerticalVelocity += (_Gravity * Mass) * Time.deltaTime;
             //move handling
             move.y = _VerticalVelocity;
-            Debug.DrawRay(transform.position, move, Color.red);
+            //Debug.DrawRay(transform.position, move, Color.red);
             _Controller.Move(move * Time.deltaTime + (Vector3.up * _GravityVelocity));
         }
     }
 
-    public void Teleport(Transform transform)
+    public void Teleport(Vector3 newPosition)
     {
-        this.transform.position = transform.position;
+        //set player position to transform position
+        this.transform.position = newPosition;
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        Rigidbody body = hit.collider.attachedRigidbody;
+        Vector3 force;
+        // no rigidbody
+        if (body == null || body.isKinematic) { return; }//don't push if no rigidbody is present
+        if (hit.moveDirection.y < -0.3) { return; }//don't push if rigidbody is below player
+        /*if (hit.moveDirection.y < -0.3)
+        {//push down with mass if rigidbody is below player
+            force = new Vector3(0, -0.5f, 0) * _Gravity * Mass;
+        }*/
+        force = hit.controller.velocity * PushPower;
+        // Apply push
+        body.AddForceAtPosition(force, hit.point);
     }
 }
