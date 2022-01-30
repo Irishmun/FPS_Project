@@ -26,16 +26,15 @@ public class MaterialWalkScriptableObject : MaterialSoundBase
 
     public void PlayWalkSound(Material walkedMaterial, AudioSource source)
     {
+        if (SoundsLookup.Count < 1)
+        {
+            Init();
+        }
         if (source.isActiveAndEnabled)
         {
-            if (!source.isPlaying)
+            if (walkedMaterial != null && SoundsLookup.ContainsKey(walkedMaterial))
             {
-                source.clip = GetRandomClip(SoundsLookup[walkedMaterial]);
-
-                if (source.clip != null)
-                {
-                    source.Play();
-                }
+                source.PlayOneShot(GetRandomClip(SoundsLookup[walkedMaterial]));
             }
         }
     }

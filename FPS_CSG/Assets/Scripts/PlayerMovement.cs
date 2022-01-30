@@ -23,20 +23,31 @@ public class PlayerMovement : MonoBehaviour
     private float FallMultiplier = 2.5f;
     [SerializeField, Tooltip("How fast the player falls when a jump has not reached its top")]
     private float LowJumpMultiplier = 2f;
-    [SerializeField, Tooltip("How many jumps the player can do in total")]
+    [SerializeField, Tooltip("How many jumps the player can do before needing to touch the ground")]
     private int MaxJumps = 1;
     [Header("Mouse look")]
-    [SerializeField]
-    private float sensitivity = 10;
-    [SerializeField]
+    [SerializeField, Tooltip("Mouse sensitivity")]
+    private float sensitivity = 5;
+    [SerializeField, Tooltip("Maximum up and down viewing angle")]
     private float MaxViewAngle = 75f;
-    [SerializeField]
+    [SerializeField, Tooltip("Main camera for the player's view")]
     private Camera ViewCam;
     [Header("Misc")]
     [SerializeField, Tooltip("(kg)How much the player weighs, used for gravity and pushing")]
     private float Mass = 1f;
     [SerializeField, Tooltip("Additional colliders to use for collision testing")]
     private BoxCollider[] AdditionalColliders;
+    [SerializeField, Tooltip("Audio source for player sounds")]
+    private AudioSource PlayerAudioSource;
+    [Header("Walking Sound")]
+    [SerializeField, Tooltip("material lookup table for sounds to make when moving over them")]
+    private MaterialWalkScriptableObject MaterialsLookup;
+    [SerializeField, Tooltip("Distance between step sounds when walking")]
+    private float BaseStepDistance = 0.5f;
+    [SerializeField, Tooltip("Multiplier on distance between step sounds when crouching")]
+    private float CrouchStepMultiplier = 1.5f;
+    [SerializeField, Tooltip("Multiplier on distance between step sounds when Sprinting")]
+    private float SprintStepMultiplier = 0.6f;
     [Header("Debug")]
     [SerializeField]
     private bool NoClip = false;
@@ -45,11 +56,13 @@ public class PlayerMovement : MonoBehaviour
 
     private CharacterController _Controller;
     private int _CurrentJumps = 0;
-    private float _MouseX, _MouseY, _GravityVelocity;
+    private float _MoveX, _MoveY, _MouseX, _MouseY, _GravityVelocity;
     private float _StandingHeight, _CurrentMovementSpeed, _CrouchOffset, _CamStandHeight;
+    private float _FootStepTimer = 0;
+    private float _GetCurrentStepOffset => _isCrouching ? BaseStepDistance * CrouchStepMultiplier : _isSprinting ? BaseStepDistance * SprintStepMultiplier : BaseStepDistance;
 
     private float _VerticalVelocity, _Gravity, _JumpValue;//gravity physics
-    private bool _Grounded;
+    private bool _Grounded, _isCrouching, _isSprinting;
 
     private void Awake()
     {
@@ -77,7 +90,9 @@ public class PlayerMovement : MonoBehaviour
     {
         debugValues();
         movement();
+        HandleMovementSound();
     }
+    //------PRIVATE METHODS------
 
     private void debugValues()
     {
@@ -101,12 +116,14 @@ public class PlayerMovement : MonoBehaviour
     private void movement()
     {
         _MouseX += Input.GetAxis("Mouse X") * sensitivity;
-        _MouseY -= Input.GetAxis("Mouse Y") * sensitivity;
+        _MouseY = Mathf.Clamp(_MouseY - (Input.GetAxis("Mouse Y") * sensitivity), -MaxViewAngle, MaxViewAngle);
 
-        float moveX = Input.GetAxis("Horizontal");
-        float moveY = Input.GetAxis("Vertical");
+        _MoveX = Input.GetAxis("Horizontal");
+        _MoveY = Input.GetAxis("Vertical");
         _Grounded = _Controller.isGrounded;
         _CurrentJumps = _Grounded ? 0 : _CurrentJumps;
+        _isSprinting = Input.GetKey(KeyCode.LeftShift);
+        _isCrouching = Input.GetKey(KeyCode.LeftControl);
 
         if (_Grounded && _VerticalVelocity < 0)
         {
@@ -115,15 +132,15 @@ public class PlayerMovement : MonoBehaviour
         }
         //camera looking
         transform.localEulerAngles = new Vector3(0, _MouseX, 0);
-        ViewCam.transform.localEulerAngles = new Vector3(Mathf.Clamp(_MouseY, -MaxViewAngle, MaxViewAngle), 0, 0);
+        ViewCam.transform.localEulerAngles = new Vector3(_MouseY, 0, 0);
 
         #region Crouch and Sprint handling
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (_isSprinting)
         {   //set moving speed to sprinting speed
             _CurrentMovementSpeed = SprintingSpeed;
         }
 
-        if (Input.GetKey(KeyCode.LeftControl))
+        if (_isCrouching)
         {
             //shorten player, reposition camera and set moving speed to crouching speed
             _Controller.height = CrouchHeight;
@@ -147,7 +164,7 @@ public class PlayerMovement : MonoBehaviour
         if (_NoClip)
         {
             //move via transform wherever the player is looking, disable collisions
-            Vector3 DMove = ((transform.right * moveX) + (ViewCam.transform.forward * moveY)).normalized;
+            Vector3 DMove = ((transform.right * _MoveX) + (ViewCam.transform.forward * _MoveY)).normalized;
             DMove *= _CurrentMovementSpeed * Time.deltaTime;
             Debug.DrawRay(transform.position, DMove, Color.red);
             if (Input.GetButton("Jump"))
@@ -160,7 +177,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             //collisions enabled, move via CharacterController where the player is looking on the horizontal plane
-            Vector3 move = ((transform.right * moveX) + (transform.forward * moveY)).normalized;
+            Vector3 move = ((transform.right * _MoveX) + (transform.forward * _MoveY)).normalized;
             move *= (_CurrentMovementSpeed);
             #region jump handling
             if (Input.GetButtonDown("Jump") && (_Grounded || _CurrentJumps < MaxJumps))
@@ -168,6 +185,7 @@ public class PlayerMovement : MonoBehaviour
                 //jump if the player has not reached the max jump amount yet
                 _VerticalVelocity += _JumpValue;
                 _CurrentJumps++;//multi jump functionality
+                _FootStepTimer = 0;//make step noise when landing
             }
             if (_Controller.velocity.y < 0 && !_Grounded)
             {
@@ -196,11 +214,38 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void HandleMovementSound()
+    {
+        if (!MaterialsLookup) { return; }//no need to do any footstep noises if no lookup table is present
+        if (!_Controller.isGrounded) { return; } //no footstep sounds if in the air
+        if (_MoveX == 0 && _MoveY == 0) { return; }//standing still
+
+        _FootStepTimer -= Time.deltaTime;
+
+        if (_FootStepTimer <= 0)
+        {
+            if (Physics.Raycast(ViewCam.transform.position, Vector3.down, out RaycastHit hit, _Controller.height, gameObject.layer))
+            {
+                Material res = hit.GetBrushMaterial();
+                if (!res)
+                {
+                    //TODO: add non csg based material getting
+                }
+                MaterialsLookup.PlayWalkSound(res, PlayerAudioSource);
+            }
+            _FootStepTimer = _GetCurrentStepOffset;
+        }
+    }
+
+    //------PUBLIC METHODS------
+
     public void Teleport(Vector3 newPosition)
     {
         //set player position to transform position
         this.transform.position = newPosition;
     }
+
+    //------EVENTS------
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {

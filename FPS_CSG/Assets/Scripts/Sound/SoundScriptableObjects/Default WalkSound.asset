@@ -13,21 +13,23 @@ MonoBehaviour:
   m_Name: Default WalkSound
   m_EditorClassIdentifier: 
   WalkSounds:
-  - material: {fileID: 2100000, guid: c0bcff94f56da0246aa5941cdbb58fdc, type: 2}
+  - material: {fileID: 2100000, guid: b49d98be1a6e7cd439c91af7d8142386, type: 2}
     sounds:
     - {fileID: 8300000, guid: b05ada179d9bc5546b08701dab8a5cbf, type: 3}
     - {fileID: 8300000, guid: 10fba267aa2758443abfe051da787225, type: 3}
     - {fileID: 8300000, guid: 61e81cc721d59a94eaf83cbaf4644131, type: 3}
     - {fileID: 8300000, guid: 52d44648ad4d55e4bb28f525c8b74b5d, type: 3}
-  - material: {fileID: 2100000, guid: 9b795f7318d146448bfb794f5a525fb7, type: 2}
+  - material: {fileID: 2100000, guid: 411cfeb6047cd5549a732afa6e6baaba, type: 2}
     sounds:
     - {fileID: 8300000, guid: cb5ec8a6c8e0b0d42984ba1bcd49cd5a, type: 3}
     - {fileID: 8300000, guid: 2e3a19865947359499a053b22a87fff2, type: 3}
     - {fileID: 8300000, guid: e475f313438f2bf4295cc4263cb436c5, type: 3}
     - {fileID: 8300000, guid: 09b7a28ec8b801548b0a960acedfff49, type: 3}
-  - material: {fileID: 2100000, guid: 0a36741de88dc4241a2d644c64ce9720, type: 2}
+  - material: {fileID: 2100000, guid: c0bcff94f56da0246aa5941cdbb58fdc, type: 2}
     sounds:
     - {fileID: 8300000, guid: 6956a57a3f2a8da45b652acf2d92fa7f, type: 3}
     - {fileID: 8300000, guid: c06af849eb11bd5448b137e817b3a556, type: 3}
     - {fileID: 8300000, guid: 74795efb75544d44f804d342b38939d1, type: 3}
     - {fileID: 8300000, guid: 63db82d36d0eace42ab98166cfc69a35, type: 3}
+  - material: {fileID: 2100000, guid: 0a36741de88dc4241a2d644c64ce9720, type: 2}
+    sounds: []
