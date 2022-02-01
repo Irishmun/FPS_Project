@@ -40,9 +40,39 @@ public static class RaycastExtension
 
         return renderer.sharedMaterials[submesh];
     }
-
+    /// <summary>
+    /// Gets the material of the model that the raycast hit i the mesh is marked as "Read/Write enabled" in its import settings
+    /// </summary>
+    /// <param name="hit"></param>
+    /// <returns>the hit material</returns>
     public static Material GetMaterial(this RaycastHit hit)
     {
+        MeshRenderer renderer = hit.collider.GetComponent<Renderer>() as MeshRenderer;
+
+        if (renderer == null) { return null; }
+        if (renderer.sharedMaterial == null) { return null; }
+        int triangleIndex = hit.triangleIndex;
+        Mesh mesh = hit.collider.gameObject.GetComponent<MeshFilter>().mesh;
+        int materialIndex = -1;
+
+        if (mesh.isReadable)
+        {
+            int triangleCount = 0;
+            for (int i = 0; i < mesh.subMeshCount; i++)
+            {
+                int indexCount = mesh.GetSubMesh(i).indexCount;
+                triangleCount = i / 3;
+                if (triangleIndex < triangleCount)
+                {
+                    materialIndex = i;
+                }
+            }
+        }
+
+        if (materialIndex > -1)
+        {
+            return renderer.sharedMaterials[materialIndex];
+        }
         return null;
     }
 }

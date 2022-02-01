@@ -40,8 +40,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField, Tooltip("Audio source for player sounds")]
     private AudioSource PlayerAudioSource;
     [Header("Walking Sound")]
-    [SerializeField, Tooltip("material lookup table for sounds to make when moving over them")]
-    private MaterialWalkScriptableObject MaterialsLookup;
+    //[SerializeField, Tooltip("material lookup table for sounds to make when moving over them")]
+    //private MaterialWalkScriptableObject MaterialsLookup;
+    [SerializeField, Tooltip("Material Audio handler for footsteps")]
+    private BaseWalkSound WalkSoundHandler;
     [SerializeField, Tooltip("Distance between step sounds when walking")]
     private float BaseStepDistance = 0.5f;
     [SerializeField, Tooltip("Multiplier on distance between step sounds when crouching")]
@@ -216,7 +218,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleMovementSound()
     {
-        if (!MaterialsLookup) { return; }//no need to do any footstep noises if no lookup table is present
+        if (!WalkSoundHandler) { return; }//no footstep sounds if the handler does not exist
         if (!_Controller.isGrounded) { return; } //no footstep sounds if in the air
         if (_MoveX == 0 && _MoveY == 0) { return; }//standing still
 
@@ -224,15 +226,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (_FootStepTimer <= 0)
         {
-            if (Physics.Raycast(ViewCam.transform.position, Vector3.down, out RaycastHit hit, _Controller.height, gameObject.layer))
-            {
-                Material res = hit.GetBrushMaterial();
-                if (!res)
-                {
-                    //TODO: add non csg based material getting
-                }
-                MaterialsLookup.PlayWalkSound(res, PlayerAudioSource);
-            }
+            WalkSoundHandler.PlayMaterialWalkSound(ViewCam, _Controller.height, PlayerAudioSource, gameObject.layer);
             _FootStepTimer = _GetCurrentStepOffset;
         }
     }
