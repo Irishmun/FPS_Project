@@ -188,6 +188,195 @@ TextureImporter:
   - first:
       213: -1195447276795505110
     second: SPR_ALL_WEAPONS_61
+  - first:
+      213: 4535755171701587725
+    second: SPR_WEAPONS_RamboKnife
+  - first:
+      213: 5636753307996609708
+    second: SPR_WEAPONS_ButterflyKnife
+  - first:
+      213: -4218007651285724099
+    second: SPR_WEAPONS_GurkhaKnife
+  - first:
+      213: -6926714391851856992
+    second: SPR_WEAPONS_SpecnazKnife
+  - first:
+      213: 5496823575194332015
+    second: SPR_WEAPONS_Kunai
+  - first:
+      213: 1151857684512671719
+    second: SPR_WEAPONS_Flashlight
+  - first:
+      213: 4131247355380285534
+    second: SPR_WEAPONS_WalterPPKS
+  - first:
+      213: -774428708656750189
+    second: SPR_WEAPONS_BrowningM1910
+  - first:
+      213: 4245676665732733950
+    second: SPR_WEAPONS_BerettaM84
+  - first:
+      213: 6092113881993888737
+    second: SPR_WEAPONS_LugerP08
+  - first:
+      213: -3359202150795437555
+    second: SPR_WEAPONS_WaltherP38
+  - first:
+      213: 5499924388652629142
+    second: SPR_WEAPONS_ColtM1911
+  - first:
+      213: -7369196423050732748
+    second: SPR_WEAPONS_BerettaM92FS
+  - first:
+      213: -2783125650269646215
+    second: SPR_WEAPONS_Glock17
+  - first:
+      213: 6204032870178849277
+    second: SPR_WEAPONS_CZ75
+  - first:
+      213: -5582118914223283627
+    second: SPR_WEAPONS_SWM645
+  - first:
+      213: -7851085135297970571
+    second: SPR_WEAPONS_BrowningHiPoint
+  - first:
+      213: -7686634809558731810
+    second: SPR_WEAPONS_SigSauerP220
+  - first:
+      213: 5849045859287985090
+    second: SPR_WEAPONS_HKP7
+  - first:
+      213: 1578074625350980492
+    second: SPR_WEAPONS_SWM4504
+  - first:
+      213: 2152118308307182980
+    second: SPR_WEAPONS_HKusp
+  - first:
+      213: 7404811960924136691
+    second: SPR_WEAPONS_AutoMag
+  - first:
+      213: 8412921707993054073
+    second: SPR_WEAPONS_Deagle
+  - first:
+      213: 7949199937170686319
+    second: SPR_WEAPONS_RemingtonXP100
+  - first:
+      213: 5988480600391924050
+    second: SPR_WEAPONS_SWM66
+  - first:
+      213: -1962684529386161145
+    second: SPR_WEAPONS_ColtPython
+  - first:
+      213: -1095765871145472423
+    second: SPR_WEAPONS_SWM29
+  - first:
+      213: 4719935242805560439
+    second: SPR_WEAPONS_Peacemaker
+  - first:
+      213: -7610493740219923040
+    second: SPR_WEAPONS_MauserM712
+  - first:
+      213: 6209591777347434315
+    second: SPR_WEAPONS_BerettaM93r
+  - first:
+      213: 8127965583577215474
+    second: SPR_WEAPONS_Uzi
+  - first:
+      213: 4790828263360380045
+    second: SPR_WEAPONS_WaltherMPK
+  - first:
+      213: 8186652437420723591
+    second: SPR_WEAPONS_Sterling
+  - first:
+      213: 8181362792477320309
+    second: SPR_WEAPONS_K69
+  - first:
+      213: -5389936416378161957
+    second: SPR_WEAPONS_IngramM10A1
+  - first:
+      213: -4921695346106020412
+    second: SPR_WEAPONS_HKMP5A4
+  - first:
+      213: -5563530148738244662
+    second: SPR_WEAPONS_HudsonShotgun
+  - first:
+      213: 7298552972723213610
+    second: SPR_WEAPONS_MossbergM500
+  - first:
+      213: 3394962643291310984
+    second: SPR_WEAPONS_RemingtonM870
+  - first:
+      213: 2579132293448610000
+    second: SPR_WEAPONS_MaverickM88
+  - first:
+      213: 3455711311900702329
+    second: SPR_WEAPONS_FranchiSpas12
+  - first:
+      213: 2280606198534422131
+    second: SPR_WEAPONS_HKMP5A5
+  - first:
+      213: 6548160258757849798
+    second: SPR_WEAPONS_M16A1
+  - first:
+      213: 7930551940440858594
+    second: SPR_WEAPONS_XM177E2
+  - first:
+      213: 975539444022602601
+    second: SPR_WEAPONS_AK47S
+  - first:
+      213: -2899012978864028672
+    second: SPR_WEAPONS_GalilSar
+  - first:
+      213: 3558793933823921040
+    second: SPR_WEAPONS_FNC
+  - first:
+      213: -3588950037599880270
+    second: SPR_WEAPONS_L85A1
+  - first:
+      213: -8206489193927292608
+    second: SPR_WEAPONS_SteurAug
+  - first:
+      213: -413776523334459912
+    second: SPR_WEAPONS_HKG3A4
+  - first:
+      213: 2643838561192573111
+    second: SPR_WEAPONS_FAMAS
+  - first:
+      213: 3331306656920672119
+    second: SPR_WEAPONS_FNP90
+  - first:
+      213: 4781558360555236923
+    second: SPR_WEAPONS_WaltherWA2000
+  - first:
+      213: -3197002437965327211
+    second: SPR_WEAPONS_M1Carbine
+  - first:
+      213: -4963446656086346899
+    second: SPR_WEAPONS_RemingtonM700
+  - first:
+      213: 4783621981082812969
+    second: SPR_WEAPONS_M16A2Sniper
+  - first:
+      213: -648504740337335817
+    second: SPR_WEAPONS_L96A1
+  - first:
+      213: -7126611343682092193
+    second: SPR_WEAPONS_HK63SG-1
+  - first:
+      213: -6640746428136781111
+    second: SPR_WEAPONS_HKPSG-1
+  - first:
+      213: 7254288670521884428
+    second: SPR_WEAPONS_FNM249Minimi
+  - first:
+      213: 186875328565413911
+    second: SPR_WEAPONS_USM60
+  - first:
+      213: 69318261433063276
+    second: SPR_WEAPONS_M634
+  - first:
+      213: 6574287256120990941
+    second: SPR_WEAPONS_M134Vulcan
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -301,7 +490,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_0
+      name: SPR_WEAPONS_RamboKnife
       rect:
         serializedVersion: 2
         x: 0
@@ -309,20 +498,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e2a6f3694aff6910800000000000000
-      internalID: 1832958766479745768
+      spriteID: d0ff9651c4d32fe30800000000000000
+      internalID: 4535755171701587725
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_1
+      name: SPR_WEAPONS_ButterflyKnife
       rect:
         serializedVersion: 2
         x: 64
@@ -330,20 +519,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5bf973c03c1e33c10800000000000000
-      internalID: 2032216084714069941
+      spriteID: cac55a1d445c93e40800000000000000
+      internalID: 5636753307996609708
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_2
+      name: SPR_WEAPONS_GurkhaKnife
       rect:
         serializedVersion: 2
         x: 128
@@ -351,20 +540,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1ba3e9b266381d40800000000000000
-      internalID: 5555249938014907165
+      spriteID: d341c3d9360a675c0800000000000000
+      internalID: -4218007651285724099
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_3
+      name: SPR_WEAPONS_SpecnazKnife
       rect:
         serializedVersion: 2
         x: 192
@@ -372,20 +561,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 065aeec1ab63bf2f0800000000000000
-      internalID: -938095924399397536
+      spriteID: 0ab851db5fd5fdf90800000000000000
+      internalID: -6926714391851856992
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_4
+      name: SPR_WEAPONS_Kunai
       rect:
         serializedVersion: 2
         x: 256
@@ -393,41 +582,62 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 560f7b3f8a0934970800000000000000
-      internalID: 8737986757346717797
+      spriteID: f6b63701be3a84c40800000000000000
+      internalID: 5496823575194332015
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_5
+      name: SPR_WEAPONS_Flashlight
       rect:
         serializedVersion: 2
-        x: 0
-        y: 390
+        x: 320
+        y: 432
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 124c864021c0f0ca0800000000000000
-      internalID: -6048602503012367327
+      spriteID: 7e78e2516783cff00800000000000000
+      internalID: 1151857684512671719
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_6
+      name: SPR_WEAPONS_WalterPPKS
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 391
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e50c6b8d493255930800000000000000
+      internalID: 4131247355380285534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_WEAPONS_BrowningM1910
       rect:
         serializedVersion: 2
         x: 64
@@ -435,20 +645,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 638a262b87b2f20a0800000000000000
-      internalID: -6904251906346801098
+      spriteID: 39166ac413da045f0800000000000000
+      internalID: -774428708656750189
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_7
+      name: SPR_WEAPONS_BerettaM84
       rect:
         serializedVersion: 2
         x: 128
@@ -456,20 +666,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef6b0378935aa2e50800000000000000
-      internalID: 6785417455086909182
+      spriteID: efb1a24de6cabea30800000000000000
+      internalID: 4245676665732733950
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_8
+      name: SPR_WEAPONS_LugerP08
       rect:
         serializedVersion: 2
         x: 192
@@ -477,20 +687,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffd42b37afac6a6b0800000000000000
-      internalID: -5285313935640998401
+      spriteID: 1e3c87b5c498b8450800000000000000
+      internalID: 6092113881993888737
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_9
+      name: SPR_WEAPONS_WaltherP38
       rect:
         serializedVersion: 2
         x: 256
@@ -498,20 +708,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9834815ddc79db5f0800000000000000
-      internalID: -739267853519666295
+      spriteID: d0a1c111177b161d0800000000000000
+      internalID: -3359202150795437555
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_10
+      name: SPR_WEAPONS_ColtM1911
       rect:
         serializedVersion: 2
         x: 320
@@ -519,20 +729,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c36dfbbbec15d2530800000000000000
-      internalID: 3831808806317184572
+      spriteID: 69cb5257718a35c40800000000000000
+      internalID: 5499924388652629142
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_11
+      name: SPR_WEAPONS_BerettaM92FS
       rect:
         serializedVersion: 2
         x: 0
@@ -540,20 +750,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79a1b8a91c995c640800000000000000
-      internalID: 5099651209867500183
+      spriteID: 43b5bfb95ea5bb990800000000000000
+      internalID: -7369196423050732748
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_12
+      name: SPR_WEAPONS_Glock17
       rect:
         serializedVersion: 2
         x: 64
@@ -561,20 +771,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 813864321efd2c870800000000000000
-      internalID: 8701763588085678872
+      spriteID: 972566a77f95069d0800000000000000
+      internalID: -2783125650269646215
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_13
+      name: SPR_WEAPONS_CZ75
       rect:
         serializedVersion: 2
         x: 128
@@ -582,20 +792,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd93f54108e145350800000000000000
-      internalID: 6004457738638146015
+      spriteID: df18bd96607291650800000000000000
+      internalID: 6204032870178849277
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_14
+      name: SPR_WEAPONS_SWM645
       rect:
         serializedVersion: 2
         x: 192
@@ -603,20 +813,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d787842456a13eaf0800000000000000
-      internalID: -368421722308183939
+      spriteID: 5526bbf3c645882b0800000000000000
+      internalID: -5582118914223283627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_15
+      name: SPR_WEAPONS_BrowningHiPoint
       rect:
         serializedVersion: 2
         x: 256
@@ -624,20 +834,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab4ce6578225cd420800000000000000
-      internalID: 2656088213964113082
+      spriteID: 57ef6319aa75b0390800000000000000
+      internalID: -7851085135297970571
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_16
+      name: SPR_WEAPONS_SigSauerP220
       rect:
         serializedVersion: 2
         x: 320
@@ -645,20 +855,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f314ba2704f22cc0800000000000000
-      internalID: -3737156429145697291
+      spriteID: ed37912cd56935590800000000000000
+      internalID: -7686634809558731810
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_17
+      name: SPR_WEAPONS_HKP7
       rect:
         serializedVersion: 2
         x: 0
@@ -666,20 +876,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a547037f844c9a170800000000000000
-      internalID: 8190293215013794906
+      spriteID: 2cb64dd283cfb2150800000000000000
+      internalID: 5849045859287985090
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_18
+      name: SPR_WEAPONS_SWM4504
       rect:
         serializedVersion: 2
         x: 64
@@ -687,20 +897,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42d83f86e744d3590800000000000000
-      internalID: -7692917278761579228
+      spriteID: c835a11c28276e510800000000000000
+      internalID: 1578074625350980492
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_19
+      name: SPR_WEAPONS_HKusp
       rect:
         serializedVersion: 2
         x: 128
@@ -708,20 +918,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2fe0beeda81833bd0800000000000000
-      internalID: -2651633322145673486
+      spriteID: 485a341f23cdddd10800000000000000
+      internalID: 2152118308307182980
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_20
+      name: SPR_WEAPONS_AutoMag
       rect:
         serializedVersion: 2
         x: 192
@@ -729,20 +939,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c554317a2959db180800000000000000
-      internalID: -9097951215117712036
+      spriteID: 3f4627ffe3d23c660800000000000000
+      internalID: 7404811960924136691
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_21
+      name: SPR_WEAPONS_Deagle
       rect:
         serializedVersion: 2
         x: 256
@@ -750,20 +960,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 969cf34ef8e36fd30800000000000000
-      internalID: 4464824868315056489
+      spriteID: 97b391848b3b0c470800000000000000
+      internalID: 8412921707993054073
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_22
+      name: SPR_WEAPONS_RemingtonXP100
       rect:
         serializedVersion: 2
         x: 320
@@ -771,20 +981,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4052fa916b6fd7530800000000000000
-      internalID: 3854508118074402052
+      spriteID: f61cd97e93b315e60800000000000000
+      internalID: 7949199937170686319
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_23
+      name: SPR_WEAPONS_SWM66
       rect:
         serializedVersion: 2
         x: 0
@@ -792,20 +1002,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65631689c21661c90800000000000000
-      internalID: -7199460110142196138
+      spriteID: 259bda2b06b5b1350800000000000000
+      internalID: 5988480600391924050
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_24
+      name: SPR_WEAPONS_ColtPython
       rect:
         serializedVersion: 2
         x: 64
@@ -813,20 +1023,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 561ef335b127c6060800000000000000
-      internalID: 6948053786812211557
+      spriteID: 70c78cbb1d423c4e0800000000000000
+      internalID: -1962684529386161145
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_25
+      name: SPR_WEAPONS_SWM29
       rect:
         serializedVersion: 2
         x: 128
@@ -834,20 +1044,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 387652f487cda7950800000000000000
-      internalID: 6447708225816323971
+      spriteID: 95ea06deebe0bc0f0800000000000000
+      internalID: -1095765871145472423
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_26
+      name: SPR_WEAPONS_Peacemaker
       rect:
         serializedVersion: 2
         x: 192
@@ -855,20 +1065,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0591b701c982c7c90800000000000000
-      internalID: -7170811855924160176
+      spriteID: 774c5469814908140800000000000000
+      internalID: 4719935242805560439
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_27
+      name: SPR_WEAPONS_MauserM712
       rect:
         serializedVersion: 2
         x: 256
@@ -876,20 +1086,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c0b1f49c80b26da0800000000000000
-      internalID: -5953001639589596984
+      spriteID: 0a58bd0f348126690800000000000000
+      internalID: -7610493740219923040
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_28
+      name: SPR_WEAPONS_BerettaM93r
       rect:
         serializedVersion: 2
         x: 320
@@ -897,20 +1107,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94353a67a8f3e6ea0800000000000000
-      internalID: -5877690599743466679
+      spriteID: b47faf852d6ec2650800000000000000
+      internalID: 6209591777347434315
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_29
+      name: SPR_WEAPONS_Uzi
       rect:
         serializedVersion: 2
         x: 0
@@ -918,20 +1128,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d87a33c159bbf0a0800000000000000
-      internalID: -6846675047667828525
+      spriteID: 2f178bb62a55cc070800000000000000
+      internalID: 8127965583577215474
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_30
+      name: SPR_WEAPONS_WaltherMPK
       rect:
         serializedVersion: 2
         x: 64
@@ -939,20 +1149,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16dd55608bee7cbf0800000000000000
-      internalID: -304011975676535455
+      spriteID: d8c3f713ce07c7240800000000000000
+      internalID: 4790828263360380045
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_31
+      name: SPR_WEAPONS_Sterling
       rect:
         serializedVersion: 2
         x: 128
@@ -960,20 +1170,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b8e78bdc815f2400800000000000000
-      internalID: 301549365477501107
+      spriteID: 78d4c006405dc9170800000000000000
+      internalID: 8186652437420723591
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_32
+      name: SPR_WEAPONS_K69
       rect:
         serializedVersion: 2
         x: 192
@@ -981,20 +1191,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6111c28c54af4ea10800000000000000
-      internalID: 1937948917294174486
+      spriteID: 5746530fc1a0a8170800000000000000
+      internalID: 8181362792477320309
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_33
+      name: SPR_WEAPONS_IngramM10A1
       rect:
         serializedVersion: 2
         x: 256
@@ -1002,20 +1212,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb63a2ea0c83ddea0800000000000000
-      internalID: -5846454341050157378
+      spriteID: bd476dbe2691335b0800000000000000
+      internalID: -5389936416378161957
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_34
+      name: SPR_WEAPONS_HKMP5A4
       rect:
         serializedVersion: 2
         x: 320
@@ -1023,20 +1233,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd75066e09617e8a0800000000000000
-      internalID: -6276022744121321507
+      spriteID: 4cd48a2b820a2bbb0800000000000000
+      internalID: -4921695346106020412
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_35
+      name: SPR_WEAPONS_HudsonShotgun
       rect:
         serializedVersion: 2
         x: 0
@@ -1044,20 +1254,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d31fd98f511ec870800000000000000
-      internalID: 8704914231786410964
+      spriteID: acfd74b7ece5ac2b0800000000000000
+      internalID: -5563530148738244662
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_36
+      name: SPR_WEAPONS_MossbergM500
       rect:
         serializedVersion: 2
         x: 64
@@ -1065,20 +1275,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c8bef801a7e07620800000000000000
-      internalID: 2769968449659517122
+      spriteID: a25d981624ba94560800000000000000
+      internalID: 7298552972723213610
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_37
+      name: SPR_WEAPONS_RemingtonM870
       rect:
         serializedVersion: 2
         x: 128
@@ -1086,20 +1296,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a68ac722bad5b7e90800000000000000
-      internalID: -7026919803982141334
+      spriteID: 88b891b69845d1f20800000000000000
+      internalID: 3394962643291310984
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_38
+      name: SPR_WEAPONS_MaverickM88
       rect:
         serializedVersion: 2
         x: 192
@@ -1107,20 +1317,20 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 597c913cd94e7a9d0800000000000000
-      internalID: -2762988480134264939
+      spriteID: 0d03eb3f72beac320800000000000000
+      internalID: 2579132293448610000
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_39
+      name: SPR_WEAPONS_FranchiSpas12
       rect:
         serializedVersion: 2
         x: 256
@@ -1128,24 +1338,45 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a01f7de59075b4d80800000000000000
-      internalID: -8265416993350881014
+      spriteID: 976f328012725ff20800000000000000
+      internalID: 3455711311900702329
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_ALL_WEAPONS_40
+      name: SPR_WEAPONS_HKMP5A5
       rect:
         serializedVersion: 2
         x: 320
         y: 180
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37eb230214756af10800000000000000
+      internalID: 2280606198534422131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_WEAPONS_M16A1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 138
         width: 64
         height: 32
       alignment: 0
@@ -1155,8 +1386,428 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cdf03e702be81b910800000000000000
-      internalID: 1851417817113628636
+      spriteID: 6c2779bcf0dbfda50800000000000000
+      internalID: 6548160258757849798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_WEAPONS_XM177E2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 138
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ef13c2d8fafe0e60800000000000000
+      internalID: 7930551940440858594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_WEAPONS_AK47S
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 138
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96b6959a4ffc98d00800000000000000
+      internalID: 975539444022602601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_WEAPONS_GalilSar
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 138
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 004009b2e03a4c7d0800000000000000
+      internalID: -2899012978864028672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_WEAPONS_FNC
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 138
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09bc36e3a30636130800000000000000
+      internalID: 3558793933823921040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_WEAPONS_L85A1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bbfb34b4fc713ec0800000000000000
+      internalID: -3588950037599880270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_WEAPONS_SteurAug
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 049c1e6de81bc1e80800000000000000
+      internalID: -8206489193927292608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_WEAPONS_HKG3A4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fdd04eb178f14af0800000000000000
+      internalID: -413776523334459912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_WEAPONS_FAMAS
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b8fc5be92dc0b420800000000000000
+      internalID: 2643838561192573111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_WEAPONS_FNP90
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 96
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77796a321cd2b3e20800000000000000
+      internalID: 3331306656920672119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_WEAPONS_WaltherWA2000
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 96
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3ea1b1cef18b5240800000000000000
+      internalID: 4781558360555236923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_WEAPONS_M1Carbine
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 54
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 594d40b9837f1a3d0800000000000000
+      internalID: -3197002437965327211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_WEAPONS_RemingtonM700
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 54
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d637f52509b4e1bb0800000000000000
+      internalID: -4963446656086346899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_WEAPONS_M16A2Sniper
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 55
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 922013ad8d6d26240800000000000000
+      internalID: 4783621981082812969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_WEAPONS_L96A1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 54
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f14905ef5c0007f0800000000000000
+      internalID: -648504740337335817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_WEAPONS_HK63SG-1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 54
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f534f87cdb0391d90800000000000000
+      internalID: -7126611343682092193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_WEAPONS_HKPSG-1
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 54
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ca867bce4457d3a0800000000000000
+      internalID: -6640746428136781111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_WEAPONS_FNM249Minimi
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0ff8986c196ca460800000000000000
+      internalID: 7254288670521884428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_WEAPONS_USM60
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 12
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7180d680f1ae79200800000000000000
+      internalID: 186875328565413911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_WEAPONS_M634
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 12
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c675a2d679446f000800000000000000
+      internalID: 69318261433063276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_WEAPONS_M134Vulcan
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 12
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddc18786d6f8c3b50800000000000000
+      internalID: 6574287256120990941
       vertices: []
       indices: 
       edges: []

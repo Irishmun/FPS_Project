@@ -27,6 +27,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField, Tooltip("How many jumps the player can do before needing to touch the ground")]
     private int MaxJumps = 1;
     [Header("Mouse look")]
+    [SerializeField]
+    private InputActionReference _MouseInputActionReference;
     [SerializeField, Tooltip("Mouse sensitivity")]
     private float sensitivity = 5;
     [SerializeField, Tooltip("Maximum up and down viewing angle")]
@@ -71,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         //lock mouse
-        //Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked;
 
         //get external components
         _Controller = GetComponent<CharacterController>();
@@ -96,6 +98,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void HandleInput()
     {
+        _MouseDelta = _MouseInputActionReference.action.ReadValue<Vector2>() * Time.deltaTime;
         movement();
         HandleMovementSound();
     }
@@ -108,6 +111,7 @@ public class PlayerMovement : MonoBehaviour
     private void MouseMovement()
     {
         _MouseX += (_MouseDelta.x * sensitivity);
+        _MouseY -= (_MouseDelta.y * sensitivity);
         _MouseY = Mathf.Clamp(_MouseY - (_MouseDelta.y * sensitivity), -MaxViewAngle, MaxViewAngle);
 
         //camera looking
@@ -207,14 +211,6 @@ public class PlayerMovement : MonoBehaviour
     {
         _Move = ctx.ReadValue<Vector2>();
         //Debug.Log($"move: {_Move}");
-    }
-
-    public void OnMouseMove(InputAction.CallbackContext ctx)
-    {//TODO: Fix increased sensitivity when moving player
-        Vector2 mouseDelta = ctx.ReadValue<Vector2>() * Time.deltaTime;
-        _MouseDelta.x = mouseDelta.x;
-        _MouseDelta.y = mouseDelta.y;
-        //Debug.Log($"MouseDelta: {_MouseDelta.x}|{_MouseDelta.y}");
     }
 
     public void OnJump(InputAction.CallbackContext ctx)

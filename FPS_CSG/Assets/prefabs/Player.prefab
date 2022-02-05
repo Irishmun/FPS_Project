@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6048503510798871183}
   - component: {fileID: 3468196015967573377}
   m_Layer: 6
-  m_Name: SPR_GUN
+  m_Name: HandSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24,13 +24,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474913057198948475}
-  m_LocalRotation: {x: -0, y: 0.76604444, z: -0, w: 0.64278764}
+  m_LocalRotation: {x: -0, y: 0.7627148, z: -0, w: 0.6467351}
   m_LocalPosition: {x: 0.72, y: -0.38, z: 0.893}
   m_LocalScale: {x: 0.75000006, y: 0.75, z: 75}
   m_Children: []
   m_Father: {fileID: 2898657097586601020}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 100, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 99.408, z: 0}
 --- !u!212 &3468196015967573377
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6447708225816323971, guid: 1967c7597d82f7140922c267a5e3f398, type: 3}
+  m_Sprite: {fileID: -1962684529386161145, guid: 1967c7597d82f7140922c267a5e3f398, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 7430642182009031996}
   - component: {fileID: 811221554710983107}
   - component: {fileID: 773610401720951483}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
@@ -140,7 +140,7 @@ MonoBehaviour:
   FallMultiplier: 5
   LowJumpMultiplier: 4
   MaxJumps: 1
-  sensitivity: 5
+  sensitivity: 1
   MaxViewAngle: 75
   ViewCam: {fileID: 3297995400032301430}
   Mass: 1
@@ -178,7 +178,7 @@ AudioSource:
   m_GameObject: {fileID: 627828580961385322}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: ac63bba5d1717374e9fd095fd77f3b6d, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -461,9 +461,9 @@ MonoBehaviour:
     m_ActionName: Player/Debug_NoClip[/Keyboard/v]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5794649401312366847}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: OnMouseMoveY
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PauseGame, Assembly-CSharp
+        m_MethodName: OnPauseGame
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -473,8 +473,48 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 0961a2d1-eaec-4080-a9fc-b49d69a40e53
-    m_ActionName: Player/LookY
+    m_ActionId: eb0c47a5-347f-4093-bbfa-3027b44ba765
+    m_ActionName: Player/Escape[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PauseGame, Assembly-CSharp
+        m_MethodName: OnResumeGame
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 898eb696-d896-47fd-b527-d1c81f00e67d
+    m_ActionName: UI/Escape[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -492,7 +532,7 @@ GameObject:
   - component: {fileID: 3297995400032301430}
   - component: {fileID: 3297995400032301432}
   - component: {fileID: 3297995400032301428}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -609,7 +649,7 @@ GameObject:
   - component: {fileID: 2898657097586601020}
   - component: {fileID: 8955734298171377760}
   - component: {fileID: 291594223550226703}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HandCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -662,7 +702,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 72
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -716,7 +756,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2989456001866548129}
   - component: {fileID: 4585449354743136608}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
