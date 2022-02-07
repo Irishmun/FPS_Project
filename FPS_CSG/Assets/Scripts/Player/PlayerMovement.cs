@@ -27,10 +27,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField, Tooltip("How many jumps the player can do before needing to touch the ground")]
     private int MaxJumps = 1;
     [Header("Mouse look")]
-    [SerializeField]
-    private InputActionReference _MouseInputActionReference;
     [SerializeField, Tooltip("Mouse sensitivity")]
-    private float sensitivity = 5;
+    private float sensitivity = 0.01f;
     [SerializeField, Tooltip("Maximum up and down viewing angle")]
     private float MaxViewAngle = 75f;
     [SerializeField, Tooltip("Main camera for the player's view")]
@@ -98,7 +96,6 @@ public class PlayerMovement : MonoBehaviour
     }
     private void HandleInput()
     {
-        _MouseDelta = _MouseInputActionReference.action.ReadValue<Vector2>() * Time.deltaTime;
         movement();
         HandleMovementSound();
     }
@@ -211,6 +208,11 @@ public class PlayerMovement : MonoBehaviour
     {
         _Move = ctx.ReadValue<Vector2>();
         //Debug.Log($"move: {_Move}");
+    }
+
+    public void OnMouseMovement(InputAction.CallbackContext ctx)
+    {
+        _MouseDelta = ctx.ReadValue<Vector2>();
     }
 
     public void OnJump(InputAction.CallbackContext ctx)
