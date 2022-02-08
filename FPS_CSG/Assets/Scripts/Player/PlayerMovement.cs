@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
     private bool NoClip = false;
 
     private bool _NoClip;
-
+    private bool crouchBlock = false;//block the player from standing up if not possible
     private CharacterController _Controller;
     private int _CurrentJumps = 0;
     private Vector2 _Move, _MouseDelta;
@@ -139,18 +139,31 @@ public class PlayerMovement : MonoBehaviour
             _Controller.height = CrouchHeight;
             _CurrentMovementSpeed = CrouchedSpeed;
             ViewCam.transform.position = new Vector3(ViewCam.transform.position.x, transform.position.y + (_Controller.height - _CrouchOffset), ViewCam.transform.position.z);
+            Debug.DrawLine(ViewCam.transform.position, ViewCam.transform.position + (Vector3.up * CrouchHeight), Color.red);
 
         }
         else
         {
             //set player back to regular size
-            _Controller.height = _StandingHeight;
-            ViewCam.transform.position = new Vector3(ViewCam.transform.position.x, transform.position.y + _CamStandHeight, ViewCam.transform.position.z);
+            //raycast, if true crouchblock = true. else, crouchblock is false and stand back up
+            if (Physics.Raycast(ViewCam.transform.position, Vector3.up, CrouchHeight, gameObject.layer))
+            {
+                crouchBlock = true;
+            }
+            else
+            {
+                _Controller.height = _StandingHeight;
+                ViewCam.transform.position = new Vector3(ViewCam.transform.position.x, transform.position.y + _CamStandHeight, ViewCam.transform.position.z);
+                crouchBlock = false;
+            }
         }
         if (!_isCrouching && !_isSprinting)
         {
             //set movementspeed to normal speed when neither sprinting nor crouching
-            _CurrentMovementSpeed = MovementSpeed;
+            if (!crouchBlock)
+            {
+                _CurrentMovementSpeed = MovementSpeed;
+            }
         }
         #endregion
         //movement
@@ -159,7 +172,7 @@ public class PlayerMovement : MonoBehaviour
             //move via transform wherever the player is looking, disable collisions
             Vector3 DMove = ((transform.right * _Move.x) + (ViewCam.transform.forward * _Move.y)).normalized;
             DMove *= _CurrentMovementSpeed * Time.deltaTime;
-            Debug.DrawRay(transform.position, DMove, Color.red);
+            //            Debug.DrawRay(transform.position, DMove, Color.red);
             if (_JumpRequest)
             {
                 DMove += ViewCam.transform.up * _JumpValue * Time.deltaTime;
