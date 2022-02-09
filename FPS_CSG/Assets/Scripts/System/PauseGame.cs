@@ -6,6 +6,10 @@ using UnityEngine.InputSystem;
 public class PauseGame : MonoBehaviour
 {
     [SerializeField]
+    private UnityEngine.EventSystems.EventSystem UIEventSystem;
+    [SerializeField, Tooltip("First option selected in options menu")]
+    private GameObject PauseFirstSelected;
+    [SerializeField]
     private PlayerInput Player;
     [SerializeField]
     private Transform PauseMenuUI;
@@ -19,13 +23,21 @@ public class PauseGame : MonoBehaviour
             if (_PauseState == false)
             {
                 //Pause
-                Cursor.lockState = CursorLockMode.Confined;
                 Player.currentActionMap.Disable();
                 Player.SwitchCurrentActionMap("UI");
                 Player.currentActionMap.Enable();
                 PauseMenuUI.gameObject.SetActive(true);
                 _PrevTimeScale = Time.timeScale;
                 Time.timeScale = 0f;
+                if (Player.currentControlScheme.Equals("Keyboard&Mouse"))
+                {
+                    Cursor.lockState = CursorLockMode.Confined;
+                }
+                else
+                {
+                    Debug.Log("Not keyboard & mouse");
+                    UIEventSystem.SetSelectedGameObject(PauseFirstSelected);
+                }
                 _PauseState = true;
             }
         }

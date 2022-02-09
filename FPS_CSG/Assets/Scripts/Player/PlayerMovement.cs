@@ -225,6 +225,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnMouseMovement(InputAction.CallbackContext ctx)
     {
+        //TODO: fix controller slow when moving
         _MouseDelta = ctx.ReadValue<Vector2>();
     }
 
@@ -275,11 +276,18 @@ public class PlayerMovement : MonoBehaviour
     {
         _isCrouching = (ctx.started || ctx.performed);
     }
+    public void OnCrouchToggle(InputAction.CallbackContext ctx)
+    {
+        _isCrouching = ctx.started ? !_isCrouching : _isCrouching;
+    }
     public void OnSprint(InputAction.CallbackContext ctx)
     {
         _isSprinting = (ctx.started || ctx.performed);
     }
-
+    public void OnSprintToggle(InputAction.CallbackContext ctx)
+    {
+        _isSprinting = ctx.started ? !_isSprinting : _isSprinting;
+    }
     //----Debug Input Actions----
     public void OnDebugBreak(InputAction.CallbackContext ctx)
     {

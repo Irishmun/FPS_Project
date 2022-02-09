@@ -5,16 +5,16 @@ using UnityEngine.Audio;
 using UnityEngine.UI;
 using TMPro;
 /*
-    Volume X
-    Vsync X
-    FullScreen
-    Resolution (maybe)
-    Keybinds (maybe)
+Volume X
+Vsync X
+FullScreen
+Resolution (maybe)
+Keybinds (maybe)
 
-    Apply X
+Apply X
 
-    Return X
- */
+Return X
+*/
 public class OptionsMenu : MonoBehaviour
 {
     [Header("Accessible Menus")]
@@ -22,6 +22,13 @@ public class OptionsMenu : MonoBehaviour
     private Transform OptionsHolder;
     [SerializeField, Tooltip("Regular Pause menu transform")]
     private Transform PauseMenu;
+    [Header("Menu selection")]
+    [SerializeField]
+    private UnityEngine.EventSystems.EventSystem UIEventSystem;
+    [SerializeField, Tooltip("First option selected in options menu")]
+    private GameObject OptionsFirstSelected;
+    [SerializeField, Tooltip("Options menu button in pause menu screen")]
+    private GameObject PauseMenuReturnedSelected;
     [Header("Option Values")]
     [SerializeField]
     private SaveFile Save;
@@ -115,6 +122,7 @@ public class OptionsMenu : MonoBehaviour
         {
             OptionsHolder.gameObject.SetActive(true);
             GetSettings();
+            UIEventSystem.SetSelectedGameObject(OptionsFirstSelected);
         }
     }
 
@@ -131,6 +139,7 @@ public class OptionsMenu : MonoBehaviour
         if (PauseMenu)
         {
             PauseMenu.gameObject.SetActive(true);
+            UIEventSystem.SetSelectedGameObject(PauseMenuReturnedSelected);
             gameObject.SetActive(false);
         }
     }
