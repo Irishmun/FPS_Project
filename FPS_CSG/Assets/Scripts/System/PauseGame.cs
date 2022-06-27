@@ -1,7 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PauseGame : MonoBehaviour
 {
@@ -15,6 +18,28 @@ public class PauseGame : MonoBehaviour
     private Transform PauseMenuUI;
     private bool _PauseState;
     private float _PrevTimeScale = 1f;
+
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (mode == LoadSceneMode.Additive)// would mean that this scene is added onto the currently active scene
+        {
+            if (Player == null)
+            {
+                Player = FindObjectOfType<PlayerInput>();
+                if (Player == null)//couldn't find any PlayerInput
+                {
+                    Debug.Log("No Player found, disabling...");
+                    gameObject.SetActive(false);
+                }
+            }
+        }
+    }
+
     #region events
     public void OnPauseGame(InputAction.CallbackContext ctx)
     {
