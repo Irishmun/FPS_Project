@@ -47,3 +47,9 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 2e3a19865947359499a053b22a87fff2, type: 3}
     - {fileID: 8300000, guid: e475f313438f2bf4295cc4263cb436c5, type: 3}
     - {fileID: 8300000, guid: 09b7a28ec8b801548b0a960acedfff49, type: 3}
+  - material: {fileID: 2100000, guid: 1aa0c8cb3561ff84ea0a4d1f01296af3, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: 26100ddcdf614b240ae1bc7db36daa39, type: 3}
+    - {fileID: 8300000, guid: b8b0ba6cdac22a24cacfcd3b69f3a4c6, type: 3}
+    - {fileID: 8300000, guid: d429eedddc238a44aadd5e698eddb6a7, type: 3}
+    - {fileID: 8300000, guid: eb2c50d8e84dcb146a03233ef2b94970, type: 3}
