@@ -6,6 +6,8 @@ public class SaveFile : MonoBehaviour
 {
     public float CurrentMasterVolume;
     public int CurrentVsyncLevel;
+    public int CurrentMaxFPS;
+
 
     void Start()
     {
@@ -27,7 +29,7 @@ public class SaveFile : MonoBehaviour
             file = File.Create(destination);
         }
 
-        GameData data = new GameData(CurrentMasterVolume, CurrentVsyncLevel);
+        GameData data = new GameData(CurrentMasterVolume, CurrentVsyncLevel, CurrentMaxFPS);
         BinaryFormatter bf = new BinaryFormatter();
         bf.Serialize(file, data);
         file.Close();
@@ -51,6 +53,12 @@ public class SaveFile : MonoBehaviour
 
         CurrentMasterVolume = data.MasterVolume;
         CurrentVsyncLevel = data.VsyncLevel;
+        CurrentMaxFPS = data.MaxFPS;
+    }
+
+    public override string ToString()
+    {
+        return $"Volume: {CurrentMasterVolume}db, Vsync: {CurrentVsyncLevel}, FPS: {CurrentMaxFPS}";
     }
 
 }

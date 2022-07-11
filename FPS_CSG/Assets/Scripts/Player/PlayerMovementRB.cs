@@ -112,7 +112,16 @@ public class PlayerMovementRB : MonoBehaviour
         }
         else//non NoClip movement
         {
+            Vector3 move = ((transform.right * _MoveInput.x) + (transform.forward * _MoveInput.y));
+            _Rb.velocity = new Vector3(move.x * MovementSpeed, _Rb.velocity.y, move.z * MovementSpeed);
 
+            //move *= (_CurrentMovementSpeed);
+            //_VerticalVelocity += (_Gravity * Mass) * Time.deltaTime;
+            //move handling
+            //move.y = _VerticalVelocity;
+            //Debug.DrawRay(transform.position, move, Color.red);
+
+            //_Controller.Move(move * Time.deltaTime + (Vector3.up * _GravityVelocity));
         }
     }
 

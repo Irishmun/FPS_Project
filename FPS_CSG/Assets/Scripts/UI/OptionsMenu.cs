@@ -11,6 +11,8 @@ FullScreen
 Resolution (maybe)
 Keybinds (maybe)
 
+Max Framerate (DEBUG)
+
 Apply X
 
 Return X
@@ -41,6 +43,10 @@ public class OptionsMenu : MonoBehaviour
     private TextMeshProUGUI VolumeLevel;
     [SerializeField]
     private Toggle VsyncToggle;
+    [SerializeField]
+    private Slider FPSSlider;
+    [SerializeField]
+    private TextMeshProUGUI FPSLevel; //-1 is no limit
     [Header("Animation")]
     [SerializeField]
     private Animator animator;
@@ -51,6 +57,7 @@ public class OptionsMenu : MonoBehaviour
 
     private bool _VSyncState, _PrevVSyncState;
     private float _Volume, _PrevVolume;
+    private int _FPS, _PrevFPS;
     #region UIEvents
     //Things that the Ui elements do, buttons and stuff
     public void OnVsyncToggle(bool Value)
@@ -67,18 +74,36 @@ public class OptionsMenu : MonoBehaviour
         VolumeLevel.text = value.ToString();
     }
 
+    public void OnFPSSlide(float value)
+    {
+        int fps = (int)value;
+        _FPS = fps;
+        FPSLevel.text = fps.ToString();
+    }
+
+    public void OnFPSForceReset()
+    {
+        _FPS = -1;
+        FPSLevel.text = _FPS.ToString();
+        ApplySettings();
+    }
+
     public void ApplySettings()
     {
         //apply the settings 
         _PrevVolume = _Volume;
         _PrevVSyncState = _VSyncState;
+        _PrevFPS = _FPS;
+        //set volume
         MasterVolume.SetFloat("MasterVol", _Volume);
         QualitySettings.vSyncCount = _VSyncState ? 1 : 0;
         MasterVolume.GetFloat("MasterVol", out float vol);
-        Debug.Log($"Volume: {vol}db, Vsync: {QualitySettings.vSyncCount}");
+        Application.targetFrameRate = _FPS;
         Save.CurrentMasterVolume = _Volume;
         Save.CurrentVsyncLevel = _VSyncState ? 1 : 0;
+        Save.CurrentMaxFPS = _FPS;
         Save.SaveToFile();
+        Debug.Log("Saved: " + Save.ToString());
     }
 
     public void ResetSettings()
@@ -86,20 +111,28 @@ public class OptionsMenu : MonoBehaviour
         //set all the values to the _Prev values
         _Volume = _PrevVolume;
         _VSyncState = _PrevVSyncState;
+        _FPS = _PrevFPS;
         ApplySettings();
     }
     public void GetSettings()
     {
         //get the current settings and apply them to the ui and prev values
         Save.LoadFile();
+        Debug.Log("Loaded: " + Save.ToString());
+        //get and apply volume settings
         VolumeSlider.value = Save.CurrentMasterVolume + 80;
         VolumeLevel.text = VolumeSlider.value.ToString();
         _PrevVolume = Save.CurrentMasterVolume;
         _Volume = _PrevVolume;
-
+        //get and apply vsync settings
         VsyncToggle.isOn = Save.CurrentVsyncLevel == 0 ? false : true;
         _PrevVSyncState = VsyncToggle.isOn;
         _VSyncState = _PrevVSyncState;
+        //get and apply fps settings
+        FPSSlider.value = Save.CurrentMaxFPS;
+        FPSLevel.text = FPSSlider.value.ToString();
+        _PrevFPS = Save.CurrentMaxFPS;
+        _FPS = _PrevFPS;
     }
     #endregion
     #region Animation Methods
