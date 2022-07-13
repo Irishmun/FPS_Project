@@ -53,3 +53,4 @@ MonoBehaviour:
     - {fileID: 8300000, guid: b8b0ba6cdac22a24cacfcd3b69f3a4c6, type: 3}
     - {fileID: 8300000, guid: d429eedddc238a44aadd5e698eddb6a7, type: 3}
     - {fileID: 8300000, guid: eb2c50d8e84dcb146a03233ef2b94970, type: 3}
+  FallBackMaterial: {fileID: 2100000, guid: c0bcff94f56da0246aa5941cdbb58fdc, type: 2}

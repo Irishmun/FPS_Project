@@ -7,6 +7,8 @@ public class MaterialWalkScriptableObject : MaterialSoundBase
 {
     [SerializeField, Tooltip("Sound(s) to play when the player walks over material.")]
     private MaterialWalkSounds[] WalkSounds;
+    [SerializeField, Tooltip("(MUST BE MATERIAL PRESENT IN WALKSOUNDS) Material to fall back to in case the gotten material isn't present in WalkSounds")]
+    private Material FallBackMaterial;
 
     [System.Serializable]
     public class MaterialWalkSounds
@@ -35,6 +37,10 @@ public class MaterialWalkScriptableObject : MaterialSoundBase
             if (walkedMaterial != null && SoundsLookup.ContainsKey(walkedMaterial))
             {
                 source.PlayOneShot(GetRandomClip(SoundsLookup[walkedMaterial]));
+            }
+            else if (walkedMaterial == null && FallBackMaterial != null)
+            {
+                source.PlayOneShot(GetRandomClip(SoundsLookup[FallBackMaterial]));
             }
         }
     }

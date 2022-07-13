@@ -1600,7 +1600,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 28290
+    surfaceParameter: 25882
     meshQueryIndex: 23
     subMeshQueryIndex: 0
     geometryHashValue: 5108488331336366254
@@ -1715,7 +1715,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 28288
+    surfaceParameter: 25884
     meshQueryIndex: 11
     subMeshQueryIndex: 0
     geometryHashValue: -5202245179860533800
@@ -2352,7 +2352,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 28298
+    surfaceParameter: 25886
     meshQueryIndex: 16
     subMeshQueryIndex: 0
     geometryHashValue: 9147240435281951390
@@ -7195,7 +7195,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 28312
+    surfaceParameter: 25896
     meshQueryIndex: 22
     subMeshQueryIndex: 0
     geometryHashValue: 7479853030792893425
@@ -9058,7 +9058,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 28282
+    surfaceParameter: 25898
     meshQueryIndex: 19
     subMeshQueryIndex: 0
     geometryHashValue: -591566056291173220
@@ -13269,7 +13269,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 28304
+    surfaceParameter: 25916
     meshQueryIndex: 24
     subMeshQueryIndex: 0
     geometryHashValue: 6488340196551628448
@@ -13588,7 +13588,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 28294
+    surfaceParameter: 25918
     meshQueryIndex: 12
     subMeshQueryIndex: 0
     geometryHashValue: 5640586066744686548
@@ -13717,7 +13717,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 28262
+    surfaceParameter: 25876
     meshQueryIndex: 0
     subMeshQueryIndex: 0
     geometryHashValue: 2786960299903108006
@@ -17884,6 +17884,17 @@ MonoBehaviour:
     - EdgeIndices: 07000000060000000500000004000000
       TexGenIndex: 5
     Generation: 2
+--- !u!114 &1063319902 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 773610401720951483, guid: d5c2dc72bd568a447b38a610bbb9e29b, type: 3}
+  m_PrefabInstance: {fileID: 3297995399555298478}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1067663984
 GameObject:
   m_ObjectHideFlags: 0
@@ -18772,7 +18783,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 28280
+    surfaceParameter: 25920
     meshQueryIndex: 21
     subMeshQueryIndex: 0
     geometryHashValue: -6672636827571572996
@@ -21812,7 +21823,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 28272
+    surfaceParameter: 25934
     meshQueryIndex: 13
     subMeshQueryIndex: 0
     geometryHashValue: 2150549548430083691
@@ -21927,7 +21938,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 28316
+    surfaceParameter: 25936
     meshQueryIndex: 10
     subMeshQueryIndex: 0
     geometryHashValue: -5114823252507992688
@@ -24357,7 +24368,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UIEventSystem: {fileID: 555067863}
   PauseFirstSelected: {fileID: 2047186406}
-  Player: {fileID: 1013453172630874731}
+  Player: {fileID: 1063319902}
   PauseMenuUI: {fileID: 2047186407}
 --- !u!114 &1395078927
 MonoBehaviour:
@@ -25083,7 +25094,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 28266
+    surfaceParameter: 25928
     meshQueryIndex: 14
     subMeshQueryIndex: 0
     geometryHashValue: 500767560890542362
@@ -28502,7 +28513,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 28274
+    surfaceParameter: 25910
     meshQueryIndex: 7
     subMeshQueryIndex: 0
     geometryHashValue: -1615735052976985218
@@ -29153,7 +29164,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 28292
+    surfaceParameter: 25908
     meshQueryIndex: 20
     subMeshQueryIndex: 0
     geometryHashValue: -5455471426463099939
@@ -31757,7 +31768,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 28302
+    surfaceParameter: 25948
     meshQueryIndex: 8
     subMeshQueryIndex: 0
     geometryHashValue: 557715761481918388
@@ -35820,7 +35831,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 28268
+    surfaceParameter: 25880
     meshQueryIndex: 17
     subMeshQueryIndex: 0
     geometryHashValue: 5765532180678167404
@@ -35935,7 +35946,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 28264
+    surfaceParameter: 25878
     meshQueryIndex: 1
     subMeshQueryIndex: 0
     geometryHashValue: -5263135253080029376
@@ -36050,7 +36061,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 28310
+    surfaceParameter: 25938
     meshQueryIndex: 18
     subMeshQueryIndex: 0
     geometryHashValue: -8511078836478945023
@@ -36483,7 +36494,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 28308
+    surfaceParameter: 25942
     meshQueryIndex: 25
     subMeshQueryIndex: 0
     geometryHashValue: 7549120708163341099
@@ -38044,7 +38055,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 28300
+    surfaceParameter: 25946
     meshQueryIndex: 9
     subMeshQueryIndex: 0
     geometryHashValue: 2884138235486962796
@@ -38351,7 +38362,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 28278
+    surfaceParameter: 25932
     meshQueryIndex: 15
     subMeshQueryIndex: 0
     geometryHashValue: -4251812994515358374
@@ -38690,7 +38701,7 @@ MonoBehaviour:
     meshQuery:
       layers: 33554440
       maskAndChannels: 8
-    surfaceParameter: 10448
+    surfaceParameter: 25950
     meshQueryIndex: 2
     subMeshQueryIndex: 0
     geometryHashValue: 5235539673410048932

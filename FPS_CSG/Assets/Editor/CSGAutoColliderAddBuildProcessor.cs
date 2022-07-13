@@ -66,7 +66,7 @@ class CSGAutoColliderAddBuildProcessor : IProcessSceneWithReport
             }
 
         }
-        Debug.Log($"Set Mesh Colliders on {models.Length} CSG Models.");
+        //Debug.Log($"Set Mesh Colliders on {models.Length} CSG Models.");
     }
 
     /// <summary>

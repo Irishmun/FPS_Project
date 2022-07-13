@@ -55,7 +55,7 @@ public static class RaycastExtension
         Mesh mesh = hit.collider.gameObject.GetComponent<MeshFilter>().mesh;
         int materialIndex = -1;
 
-        Debug.Log($"{hit.collider.name}'s mesh readable: {mesh.isReadable}");
+        //Debug.Log($"{hit.collider.name}'s mesh readable: {mesh.isReadable}");
         if (mesh.isReadable)
         {
             int triangleCount = 0;
