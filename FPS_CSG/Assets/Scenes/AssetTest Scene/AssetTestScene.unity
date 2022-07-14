@@ -1795,7 +1795,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777218
       maskAndChannels: 234881027
-    surfaceParameter: 25068
+    surfaceParameter: 43622
     meshQueryIndex: 7
     subMeshQueryIndex: 0
     geometryHashValue: -6296460016161636101
@@ -2003,7 +2003,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777218
       maskAndChannels: 234881027
-    surfaceParameter: 25086
+    surfaceParameter: 43626
     meshQueryIndex: 9
     subMeshQueryIndex: 0
     geometryHashValue: 5985191546846327349
@@ -2967,7 +2967,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &555067862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4092,7 +4092,7 @@ MonoBehaviour:
     meshQuery:
       layers: 33554440
       maskAndChannels: 8
-    surfaceParameter: 25084
+    surfaceParameter: 25948
     meshQueryIndex: 2
     subMeshQueryIndex: 0
     geometryHashValue: -2349947867890513498
@@ -4245,7 +4245,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777221
       maskAndChannels: 234881031
-    surfaceParameter: 25070
+    surfaceParameter: 43624
     meshQueryIndex: 13
     subMeshQueryIndex: 0
     geometryHashValue: 4337603469067014627
@@ -4360,7 +4360,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 25074
+    surfaceParameter: 26182
     meshQueryIndex: 1
     subMeshQueryIndex: 0
     geometryHashValue: 4699445104043876404
@@ -4388,7 +4388,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &760923137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4854,7 +4854,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777218
       maskAndChannels: 234881027
-    surfaceParameter: 25074
+    surfaceParameter: 26182
     meshQueryIndex: 0
     subMeshQueryIndex: 0
     geometryHashValue: 4654119390838416311
@@ -5133,7 +5133,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 25086
+    surfaceParameter: 43626
     meshQueryIndex: 10
     subMeshQueryIndex: 0
     geometryHashValue: -1866008372622796047
@@ -7530,6 +7530,8 @@ MonoBehaviour:
   VolumeSlider: {fileID: 1876535583}
   VolumeLevel: {fileID: 1185762954}
   VsyncToggle: {fileID: 833768484}
+  FPSSlider: {fileID: 0}
+  FPSLevel: {fileID: 0}
   animator: {fileID: 1163399514}
   OpenAnimation: ANIM_UI_OptionsOpen
   CloseAnimation: ANIM_UI_OptionsClose
@@ -8016,7 +8018,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 25068
+    surfaceParameter: 43622
     meshQueryIndex: 8
     subMeshQueryIndex: 0
     geometryHashValue: -8593707856582503448
@@ -8131,7 +8133,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777218
       maskAndChannels: 234881027
-    surfaceParameter: 25070
+    surfaceParameter: 43624
     meshQueryIndex: 12
     subMeshQueryIndex: 0
     geometryHashValue: -9126866809303909219
@@ -8939,7 +8941,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1395078925
 Transform:
   m_ObjectHideFlags: 0
@@ -8985,6 +8987,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentMasterVolume: 0
   CurrentVsyncLevel: 0
+  CurrentMaxFPS: 0
 --- !u!1 &1439685195
 GameObject:
   m_ObjectHideFlags: 0
@@ -9600,7 +9603,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777218
       maskAndChannels: 234881027
-    surfaceParameter: 25082
+    surfaceParameter: 25874
     meshQueryIndex: 11
     subMeshQueryIndex: 0
     geometryHashValue: 5405633705498709807
@@ -13203,10 +13206,6 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[21].m_ActionName
       value: Player/SprintToggle[/XInputControllerWindows/leftStickPress]
       objectReference: {fileID: 0}
-    - target: {fileID: 773610401720951483, guid: d5c2dc72bd568a447b38a610bbb9e29b, type: 3}
-      propertyPath: m_ActionEvents.Array.data[18].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1395078926}
     - target: {fileID: 773610401720951483, guid: d5c2dc72bd568a447b38a610bbb9e29b, type: 3}
       propertyPath: m_ActionEvents.Array.data[19].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

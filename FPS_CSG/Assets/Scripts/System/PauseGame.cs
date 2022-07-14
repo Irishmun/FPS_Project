@@ -36,35 +36,37 @@ public class PauseGame : MonoBehaviour
                     Debug.Log("No Player found, disabling...");
                     gameObject.SetActive(false);
                 }
+                else
+                {
+                    //Player.act
+                    CrossScenePauseEvent.OnPauseRequestEvent += OnPauseGame;
+                }
             }
         }
     }
 
     #region events
-    public void OnPauseGame(InputAction.CallbackContext ctx)
+    public void OnPauseGame(object sender, EventArgs e)
     {
-        if (ctx.performed)
+        if (_PauseState == false)
         {
-            if (_PauseState == false)
+            //Pause
+            Player.currentActionMap.Disable();
+            Player.SwitchCurrentActionMap("UI");
+            Player.currentActionMap.Enable();
+            PauseMenuUI.gameObject.SetActive(true);
+            _PrevTimeScale = Time.timeScale;
+            Time.timeScale = 0f;
+            if (Player.currentControlScheme.Equals("Keyboard&Mouse"))
             {
-                //Pause
-                Player.currentActionMap.Disable();
-                Player.SwitchCurrentActionMap("UI");
-                Player.currentActionMap.Enable();
-                PauseMenuUI.gameObject.SetActive(true);
-                _PrevTimeScale = Time.timeScale;
-                Time.timeScale = 0f;
-                if (Player.currentControlScheme.Equals("Keyboard&Mouse"))
-                {
-                    Cursor.lockState = CursorLockMode.Confined;
-                }
-                else
-                {
-                    Debug.Log("Not keyboard & mouse");
-                    UIEventSystem.SetSelectedGameObject(PauseFirstSelected);
-                }
-                _PauseState = true;
+                Cursor.lockState = CursorLockMode.Confined;
             }
+            else
+            {
+                Debug.Log("Not keyboard & mouse");
+                UIEventSystem.SetSelectedGameObject(PauseFirstSelected);
+            }
+            _PauseState = true;
         }
     }
 
@@ -102,9 +104,20 @@ public class PauseGame : MonoBehaviour
 
     public void RestartScene()
     {
-        UnityEngine.SceneManagement.Scene scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
-        Time.timeScale = _PrevTimeScale;
-        UnityEngine.SceneManagement.SceneManager.LoadScene(scene.name);
+        //UnityEngine.SceneManagement.Scene scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
+        //Debug.Log(SceneManager.sceneCount);
+        //Time.timeScale = _PrevTimeScale;
+        //for (int i = 0; i < SceneManager.sceneCount; i++)
+        //{
+        //    if (SceneManager.GetSceneAt(i) == scene)
+        //    {
+        //        UnityEngine.SceneManagement.SceneManager.LoadScene(SceneManager.GetSceneAt(i).name);
+        //    }
+        //    else
+        //    {
+        //        UnityEngine.SceneManagement.SceneManager.LoadScene(SceneManager.GetSceneAt(i).name, LoadSceneMode.Additive);
+        //    }
+        //}
     }
 
     public void QuitGame()

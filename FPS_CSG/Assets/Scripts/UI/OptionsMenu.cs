@@ -103,7 +103,7 @@ public class OptionsMenu : MonoBehaviour
         Save.CurrentVsyncLevel = _VSyncState ? 1 : 0;
         Save.CurrentMaxFPS = _FPS;
         Save.SaveToFile();
-        Debug.Log("Saved: " + Save.ToString());
+        //Debug.Log("Saved: " + Save.ToString());
     }
 
     public void ResetSettings()

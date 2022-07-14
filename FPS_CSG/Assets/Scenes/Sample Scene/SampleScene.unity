@@ -1600,7 +1600,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 25882
+    surfaceParameter: 25878
     meshQueryIndex: 23
     subMeshQueryIndex: 0
     geometryHashValue: 5108488331336366254
@@ -1715,7 +1715,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 25884
+    surfaceParameter: 25880
     meshQueryIndex: 11
     subMeshQueryIndex: 0
     geometryHashValue: -5202245179860533800
@@ -2352,7 +2352,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 25886
+    surfaceParameter: 25882
     meshQueryIndex: 16
     subMeshQueryIndex: 0
     geometryHashValue: 9147240435281951390
@@ -7195,7 +7195,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 25896
+    surfaceParameter: 25892
     meshQueryIndex: 22
     subMeshQueryIndex: 0
     geometryHashValue: 7479853030792893425
@@ -9058,7 +9058,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 25898
+    surfaceParameter: 25894
     meshQueryIndex: 19
     subMeshQueryIndex: 0
     geometryHashValue: -591566056291173220
@@ -9806,7 +9806,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &555067862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13269,7 +13269,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 25916
+    surfaceParameter: 25912
     meshQueryIndex: 24
     subMeshQueryIndex: 0
     geometryHashValue: 6488340196551628448
@@ -13297,7 +13297,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &760923137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13588,7 +13588,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 25918
+    surfaceParameter: 25914
     meshQueryIndex: 12
     subMeshQueryIndex: 0
     geometryHashValue: 5640586066744686548
@@ -13717,7 +13717,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 25876
+    surfaceParameter: 25872
     meshQueryIndex: 0
     subMeshQueryIndex: 0
     geometryHashValue: 2786960299903108006
@@ -18783,7 +18783,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 25920
+    surfaceParameter: 25918
     meshQueryIndex: 21
     subMeshQueryIndex: 0
     geometryHashValue: -6672636827571572996
@@ -21823,7 +21823,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 25934
+    surfaceParameter: 25932
     meshQueryIndex: 13
     subMeshQueryIndex: 0
     geometryHashValue: 2150549548430083691
@@ -21938,7 +21938,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 25936
+    surfaceParameter: 25934
     meshQueryIndex: 10
     subMeshQueryIndex: 0
     geometryHashValue: -5114823252507992688
@@ -24338,7 +24338,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1395078925
 Transform:
   m_ObjectHideFlags: 0
@@ -24361,7 +24361,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1395078924}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 87ca5bee3ca5d5740ac8f8af03eb062f, type: 3}
   m_Name: 
@@ -24377,7 +24377,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1395078924}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf9ff9e0f429f0a479915846232cfb44, type: 3}
   m_Name: 
@@ -25094,7 +25094,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 25928
+    surfaceParameter: 25926
     meshQueryIndex: 14
     subMeshQueryIndex: 0
     geometryHashValue: 500767560890542362
@@ -28513,7 +28513,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 25910
+    surfaceParameter: 25906
     meshQueryIndex: 7
     subMeshQueryIndex: 0
     geometryHashValue: -1615735052976985218
@@ -29164,7 +29164,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 25908
+    surfaceParameter: 25904
     meshQueryIndex: 20
     subMeshQueryIndex: 0
     geometryHashValue: -5455471426463099939
@@ -31768,7 +31768,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 25948
+    surfaceParameter: 25946
     meshQueryIndex: 8
     subMeshQueryIndex: 0
     geometryHashValue: 557715761481918388
@@ -35831,7 +35831,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 25880
+    surfaceParameter: 25876
     meshQueryIndex: 17
     subMeshQueryIndex: 0
     geometryHashValue: 5765532180678167404
@@ -35946,7 +35946,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 25878
+    surfaceParameter: 25874
     meshQueryIndex: 1
     subMeshQueryIndex: 0
     geometryHashValue: -5263135253080029376
@@ -36061,7 +36061,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 25938
+    surfaceParameter: 25936
     meshQueryIndex: 18
     subMeshQueryIndex: 0
     geometryHashValue: -8511078836478945023
@@ -36494,7 +36494,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 25942
+    surfaceParameter: 25940
     meshQueryIndex: 25
     subMeshQueryIndex: 0
     geometryHashValue: 7549120708163341099
@@ -38055,7 +38055,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 25946
+    surfaceParameter: 25944
     meshQueryIndex: 9
     subMeshQueryIndex: 0
     geometryHashValue: 2884138235486962796
@@ -38072,14 +38072,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 760923140}
     m_Modifications:
-    - target: {fileID: 1962202718525280554, guid: fdcdecba3feb67a498eb6a6c6e459b27, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1962202718525280554, guid: fdcdecba3feb67a498eb6a6c6e459b27, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1976758242740689765, guid: fdcdecba3feb67a498eb6a6c6e459b27, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -38172,26 +38164,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1395078926}
-    - target: {fileID: 2634015331842776452, guid: fdcdecba3feb67a498eb6a6c6e459b27, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ResumeGame
-      objectReference: {fileID: 0}
     - target: {fileID: 2634015332440919917, guid: fdcdecba3feb67a498eb6a6c6e459b27, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1395078926}
-    - target: {fileID: 2634015332440919917, guid: fdcdecba3feb67a498eb6a6c6e459b27, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RestartScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 2634015332448929580, guid: fdcdecba3feb67a498eb6a6c6e459b27, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2634015332448929580, guid: fdcdecba3feb67a498eb6a6c6e459b27, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2634015332534349046, guid: fdcdecba3feb67a498eb6a6c6e459b27, type: 3}
       propertyPath: Save
       value: 
@@ -38204,42 +38180,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1395078926}
-    - target: {fileID: 2634015332939091384, guid: fdcdecba3feb67a498eb6a6c6e459b27, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: QuitGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 2634015333393688369, guid: fdcdecba3feb67a498eb6a6c6e459b27, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2634015333393688369, guid: fdcdecba3feb67a498eb6a6c6e459b27, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2634015333393688369, guid: fdcdecba3feb67a498eb6a6c6e459b27, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3471344375338296197, guid: fdcdecba3feb67a498eb6a6c6e459b27, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3471344375338296197, guid: fdcdecba3feb67a498eb6a6c6e459b27, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3471344375338296197, guid: fdcdecba3feb67a498eb6a6c6e459b27, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4508578750235555023, guid: fdcdecba3feb67a498eb6a6c6e459b27, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6022406112651705418, guid: fdcdecba3feb67a498eb6a6c6e459b27, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdcdecba3feb67a498eb6a6c6e459b27, type: 3}
 --- !u!224 &2047186405 stripped
@@ -38362,7 +38302,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 25932
+    surfaceParameter: 25930
     meshQueryIndex: 15
     subMeshQueryIndex: 0
     geometryHashValue: -4251812994515358374
@@ -38701,7 +38641,7 @@ MonoBehaviour:
     meshQuery:
       layers: 33554440
       maskAndChannels: 8
-    surfaceParameter: 25950
+    surfaceParameter: 25948
     meshQueryIndex: 2
     subMeshQueryIndex: 0
     geometryHashValue: 5235539673410048932
@@ -40491,7 +40431,7 @@ PrefabInstance:
       objectReference: {fileID: 555067862}
     - target: {fileID: 773610401720951483, guid: d5c2dc72bd568a447b38a610bbb9e29b, type: 3}
       propertyPath: m_ActionEvents.Array.size
-      value: 22
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 773610401720951483, guid: d5c2dc72bd568a447b38a610bbb9e29b, type: 3}
       propertyPath: m_ActionEvents.Array.data[20].m_ActionId
@@ -40502,6 +40442,14 @@ PrefabInstance:
       value: 06a89e63-5545-4450-a705-f04b4fbf1496
       objectReference: {fileID: 0}
     - target: {fileID: 773610401720951483, guid: d5c2dc72bd568a447b38a610bbb9e29b, type: 3}
+      propertyPath: m_ActionEvents.Array.data[22].m_ActionId
+      value: 1f8c64be-2741-4b61-9ba0-d20a2ca9442b
+      objectReference: {fileID: 0}
+    - target: {fileID: 773610401720951483, guid: d5c2dc72bd568a447b38a610bbb9e29b, type: 3}
+      propertyPath: m_ActionEvents.Array.data[23].m_ActionId
+      value: b38de32c-849e-4ae8-b1c2-9ea772515b21
+      objectReference: {fileID: 0}
+    - target: {fileID: 773610401720951483, guid: d5c2dc72bd568a447b38a610bbb9e29b, type: 3}
       propertyPath: m_ActionEvents.Array.data[20].m_ActionName
       value: Player/CrouchToggle[/XInputControllerWindows/rightStickPress]
       objectReference: {fileID: 0}
@@ -40510,9 +40458,13 @@ PrefabInstance:
       value: Player/SprintToggle[/XInputControllerWindows/leftStickPress]
       objectReference: {fileID: 0}
     - target: {fileID: 773610401720951483, guid: d5c2dc72bd568a447b38a610bbb9e29b, type: 3}
-      propertyPath: m_ActionEvents.Array.data[18].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1395078926}
+      propertyPath: m_ActionEvents.Array.data[22].m_ActionName
+      value: Player/MouseScroll[/Mouse/scroll]
+      objectReference: {fileID: 0}
+    - target: {fileID: 773610401720951483, guid: d5c2dc72bd568a447b38a610bbb9e29b, type: 3}
+      propertyPath: m_ActionEvents.Array.data[23].m_ActionName
+      value: Player/Dpad
+      objectReference: {fileID: 0}
     - target: {fileID: 773610401720951483, guid: d5c2dc72bd568a447b38a610bbb9e29b, type: 3}
       propertyPath: m_ActionEvents.Array.data[19].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
